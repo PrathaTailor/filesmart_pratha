@@ -1,0 +1,793 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.offerWrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: var.$xl-screen) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: var.$phablet) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .container {
+    width: var.$full;
+    max-width: 1216px;
+    margin: var.$auto;
+    display: var.$flex;
+    height: 740px;
+
+    @media screen and (max-width: var.$l-tablet) {
+      flex-wrap: var.$wrap;
+      height: var.$full;
+
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+      height: var.$full;
+    }
+
+    .offerDetails {
+      padding: 57px 0px 57px 68px;
+      width: var.$full;
+      max-width: 663.62px;
+      background: color.$lavender;
+
+      @media screen and (max-width: var.$xl-screen) {
+        padding: 60px;
+      }
+
+      @media screen and (max-width: var.$laptop-screen) {
+        padding: 40px;
+      }
+
+      @media screen and (max-width: var.$xl-tablet) {
+        width: var.$full;
+        padding: 30px 30px 50px;
+        max-width: var.$full;
+      }
+
+      @media screen and (max-width: var.$l-tablet) {
+        order: 2;
+      }
+
+      @media screen and (max-width: var.$mobile-l) {
+        padding: 28px 24px 60px;
+      }
+
+      .offerTitle {
+        font-weight: var.$font-semibold;
+        font-size: 36px;
+        line-height: 36px;
+        color: color.$black-pearl;
+
+        @media screen and (max-width: var.$xl-screen) {
+          font-size: 50px;
+          line-height: 60px;
+        }
+
+        @media screen and (max-width: var.$laptop-screen) {
+          font-size: var.$title-xl;
+          line-height: 50px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+          font-size: 32px;
+          line-height: 40px;
+        }
+
+        .iconAllInclusive {
+          width: 23px;
+          min-width: 23px;
+          max-width: 23px;
+          height: 23px;
+          object-fit: var.$contain;
+          display: var.$inline-block;
+          left: 0px !important;
+          top: 0px !important;
+
+          @media screen and (max-width: var.$phablet) {
+            min-width: 33px !important;
+            height: 33px !important;
+          }
+        }
+
+        .offerTitleSm {
+          display: var.$inline-block;
+          padding-left: 2px;
+
+          @media screen and (max-width: var.$phablet) {
+            padding-left: 13px;
+            font-size: 28px;
+          }
+        }
+      }
+
+      .offerSubDesc {
+        font-weight: var.$font-semibold;
+        font-size: 36px;
+        line-height: 36px;
+        color: color.$blue;
+        margin-top: 4px;
+
+        @media screen and (max-width: var.$phablet) {
+          font-size: 28px;
+          line-height: 95.5%;
+          margin-bottom: 24px;
+          margin-top: 0px;
+        }
+      }
+
+      .title {
+        font-weight: var.$font-semibold;
+        font-size: 55px;
+        line-height: var.$leading-xxl;
+        color: color.$black-pearl;
+        margin-bottom: 37px;
+        max-width: 743px;
+
+        @media screen and (max-width: var.$xl-screen) {
+          max-width: var.$full;
+        }
+
+        @media screen and (max-width: var.$lg-screen) {
+          font-size: 45px;
+          line-height: 50px;
+          margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+          font-size: 35px;
+          line-height: var.$leading-xl;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+          font-size: 28px;
+          line-height: 35px;
+        }
+
+        @media screen and (max-width: var.$mobile-sm) {
+          font-size: 24px;
+          line-height: var.$leading-lg;
+        }
+      }
+
+      .offerList {
+        list-style: var.$d-none;
+        padding: 0px;
+        display: var.$flex;
+        flex-wrap: var.$wrap;
+        margin-top: 25px;
+        width: 451px;
+        margin-bottom: 3px;
+
+        @media screen and (max-width: var.$phablet) {
+          margin-top: 0px;
+          margin-bottom: 13px;
+          width: 100%;
+        }
+
+        .item {
+          font-weight: var.$font-medium;
+          font-size: 24px;
+          line-height: 27px;
+          color: color.$black-pearl;
+          width: var.$half;
+          display: var.$flex;
+          align-items: var.$center;
+          padding-top: 8px;
+          padding-bottom: 15px;
+
+          @media screen and (max-width: var.$xl-tablet) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-size: 24px;
+            line-height: 26px;
+          }
+
+          @media screen and (max-width: var.$phablet) {
+            font-size: 20px;
+            line-height: 21px;
+            letter-spacing: 0.5px;
+            padding-bottom: 4px;
+          }
+
+          @media screen and (max-width: var.$mobile-sm) {
+            width: var.$full;
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+
+          .imgWrap {
+            display: var.$inline-flex;
+            align-items: var.$center;
+            justify-content: var.$center;
+            margin-right: 9.5px;
+
+            img {
+              object-fit: var.$contain;
+
+              @media screen and (max-width: var.$phablet) {
+                max-width: 16px !important;
+                min-width: 16px !important;
+              }
+            }
+          }
+        }
+
+        .item:nth-child(even) {
+          @media screen and (max-width: var.$phablet) {
+            padding-left: 12px;
+          }
+        }
+      }
+
+      .getAdditional {
+        font-size: 16px;
+        line-height: 16px;
+        color: color.$black-pearl;
+        font-family: var.$font-metropolis;
+        text-align: var.$left;
+        position: var.$relative;
+        left: 118px;
+        font-weight: var.$font-light;
+
+        @media screen and (max-width: var.$phablet) {
+          text-align: var.$center;
+          margin-top: 6px;
+          font-size: 15px;
+          line-height: 15px;
+          padding-left: 35px;
+          left: 10px;
+          top: 0px;
+        }
+
+        &:before {
+          content: '';
+          position: var.$absolute;
+          background-image: url('../../images/icons/icon-arrow-draw.png');
+          width: 29px;
+          height: 31px;
+          object-fit: var.$contain;
+          top: 50%;
+          transform: translate(-35px, -19px);
+          background-size: 26px;
+          background-position: 4px 0px;
+          background-repeat: var.$no-repeat;
+        }
+      }
+
+      .pricingSection {
+        display: var.$flex;
+        margin: 35px 0px 0px 0px;
+        height: 117px;
+
+        @media screen and (max-width: var.$phablet) {
+          margin: 30px 36px 18px;
+        }
+
+        .pricingDesc {
+          font-weight: var.$font-medium;
+          font-size: 22px;
+          line-height: 27px;
+          color: color.$blue;
+          font-family: var.$font-metropolis;
+          max-width: var.$min-w-max;
+
+          @media screen and (max-width: var.$mobile-sm) {
+            padding-left: 0px;
+            max-width: 85px;
+          }
+        }
+
+        .pricing {
+          margin-left: 9px;
+          position: var.$relative;
+          margin-top: 0px;
+          bottom: 18px;
+
+          @media screen and (max-width: var.$laptop-screen) {
+            padding-left: 0px;
+          }
+
+          @media screen and (max-width: var.$phablet) {
+            padding-top: 31px;
+            margin-left: 7px;
+          }
+
+          .pricingWrapper {
+            .sign {
+              font-family: var.$font-metropolis;
+              font-size: 52px;
+              line-height: 52px;
+              font-weight: var.$font-bold;
+              letter-spacing: -0.045em;
+              color: color.$blue;
+
+              @media screen and (max-width: var.$phablet) {
+                font-size: 61px;
+                position: var.$relative;
+                top: -6px;
+                left: -3px;
+              }
+            }
+
+            .amount {
+              font-size: 133px;
+              line-height: 133px;
+              font-weight: var.$font-bold;
+              font-family: var.$font-metropolis;
+              letter-spacing: -0.045em;
+              color: color.$blue;
+              position: var.$relative;
+              left: 4px;
+
+              @media screen and (max-width: var.$phablet) {
+                font-size: 121px;
+                line-height: 121px;
+                left: 2px;
+              }
+            }
+
+            .floatValue {
+              font-size: 27px;
+              line-height: 27px;
+              color: color.$blue;
+              letter-spacing: -0.045em;
+              font-family: var.$font-metropolis;
+              font-weight: var.$font-bold;
+              position: var.$relative;
+              left: 4px;
+
+              @media screen and (max-width: var.$laptop-screen) {
+                font-size: 45px;
+                line-height: 50px;
+              }
+
+              @media screen and (max-width: var.$phablet) {
+                font-size: 39px;
+                line-height: 39px;
+              }
+            }
+          }
+        }
+      }
+
+      .featureListTitle {
+        color: color.$black-pearl;
+        font-weight: var.$font-bold;
+        font-size: 20px;
+        line-height: 27px;
+        font-family: var.$font-metropolis;
+
+        @media screen and (max-width: var.$phablet) {
+          font-size: 24px;
+          line-height: 40px;
+        }
+
+        span {
+          text-decoration: var.$underline;
+        }
+      }
+
+      .featuresList {
+        list-style: var.$d-none;
+        padding: 0px;
+        margin: 6.34px var.$auto 10.75px;
+        display: var.$flex;
+        flex-direction: var.$flex-col;
+        gap: 4.25px;
+
+        :nth-child(3) {
+          line-height: 16px !important;
+        }
+
+        .item {
+          display: var.$flex;
+          height: 42px;
+          align-items: var.$center;
+          font-size: 20px;
+          line-height: 42px;
+          position: var.$relative;
+          left: -2px;
+          font-weight: var.$font-light;
+
+          @media screen and (max-width: var.$phablet) {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 24px;
+          }
+
+          p {
+            position: var.$relative;
+            top: -3px;
+            left: 5px;
+          }
+
+          .imgWrap {
+            display: var.$inline-flex;
+            align-items: var.$center;
+            justify-content: var.$center;
+            gap: 4.25px;
+            position: var.$relative;
+            top: -3px;
+
+            @media screen and (max-width: var.$phablet) {
+              width: 112px;
+              height: 38px;
+              margin-right: 18px;
+            }
+
+            @media screen and (max-width: var.$phablet) {
+              margin-right: 0px;
+            }
+
+
+            img {
+              object-fit: var.$contain;
+
+              @media screen and (max-width: var.$phablet) {
+                min-width: 60px !important;
+                max-width: 60px !important;
+              }
+            }
+          }
+        }
+
+        .item:nth-child(3) {
+          @media screen and (max-width: var.$phablet) {
+            .imgWrap {
+              width: 100px;
+              position: var.$relative;
+              top: 0px;
+            }
+
+            span {
+              p {
+                position: var.$relative;
+                top: 0px;
+              }
+
+              b {
+                line-height: 30px;
+              }
+
+              b:nth-last-child(1) {
+                font-size: 16px;
+                left: -1px;
+                top: 9px;
+              }
+            }
+          }
+        }
+
+        @media screen and (max-width: var.$phablet) {
+          margin: 19.34px var.$auto 16.75px;
+          gap: 26.25px;
+        }
+
+      }
+
+      .featuresList {
+        li:nth-last-child(1) {
+          p {
+            b:nth-last-child(1) {
+              position: var.$relative;
+              top: 8px;
+              letter-spacing: -0.06px;
+
+              @media screen and (max-width: var.$phablet) {
+                left: -7px;
+                top: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .btnWrapper {
+        margin-top: 30px;
+        position: var.$relative;
+        left: -2px;
+
+        @media screen and (max-width: var.$phablet) {
+          text-align: var.$center;
+          margin-top: 58px;
+          margin-bottom: 11px;
+        }
+
+        .btn {
+          width: var.$full;
+          width: 240px;
+          height: 60px;
+          background: color.$light-yellow;
+          border-radius: 12px;
+          font-weight: var.$font-bold;
+          font-size: 29px;
+          line-height: 29px;
+          text-align: var.$center;
+          color: color.$vulcan;
+          border: var.$border-none;
+          display: var.$inline-flex;
+          align-items: var.$center;
+          justify-content: var.$center;
+          cursor: var.$cursor-pointer;
+          position: var.$relative;
+          box-shadow: 0px 4px 0px color.$yellow, 0px 8px 0px -4px rgba(255, 184, 0, 0.19);
+          border-radius: 12px;
+          transition: all ease-in-out 0.5s;
+
+          &:hover {
+            transition: all ease-in-out 0.5s;
+            background: color.$tangerine-yellow;
+          }
+
+          &:active {
+            background: color.$candlelight;
+            box-shadow: 0px 2px 0px color.$persian-green, 0px 8px 0px -4px color.$cream-and-butter;
+            transition: all ease-in-out 0.5s;
+            transform: translateY(2px);
+          }
+
+          &:disabled {
+            background: color.$light-gray;
+            box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+            transition: all ease-in-out 0.5s;
+            color: color.$white;
+            transform: translateY(0px);
+
+            img {
+              filter: brightness(0) invert(1);
+            }
+          }
+
+          @media screen and (max-width: var.$xl-tablet) {
+            height: 71px;
+            max-width: 268px;
+            padding: 20px 30px;
+            font-size: 22px;
+            line-height: 29px;
+          }
+
+          @media screen and (max-width: var.$xl-tablet) {
+            height: 56px;
+            left: -12px;
+          }
+
+          .btnText {
+            margin-right: 20px;
+
+            @media screen and (max-width: var.$xl-tablet) {
+              margin-right: 19px;
+              margin-top: 5px;
+            }
+
+            span {
+              display: var.$block;
+
+              &.lgText {
+                font-weight: var.$font-bold;
+                font-size: 18px;
+                line-height: 24px;
+              }
+
+              &.smText {
+                font-weight: var.$font-light;
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+          }
+
+          .iconArrow {
+            display: var.$inline-block;
+            margin-left: 20px;
+            object-fit: var.$contain;
+
+            @media screen and (max-width: var.$xl-tablet) {
+              max-width: 13px !important;
+              min-width: 13px !important;
+            }
+          }
+        }
+
+        &>span {
+          @media screen and (max-width: var.$phablet) {
+            position: var.$absolute;
+          }
+        }
+      }
+    }
+
+    .offerBanner {
+      width: var.$full;
+      max-width: 552.83px;
+      position: var.$relative;
+      display: var.$flex;
+      background-size: var.$cover;
+      background-position: var.$top var.$center;
+
+      @media screen and (max-width: var.$xl-tablet) {
+        width: var.$full;
+        order: 1;
+        max-width: var.$full;
+      }
+
+      @media screen and (max-width: var.$l-tablet) {
+        height: 100vh;
+      }
+
+      @media screen and (max-width: var.$phablet) {
+        height: 80vh;
+      }
+
+      @media screen and (max-width: var.$mobile-l) {
+        height: 445px;
+      }
+
+      .fileSmartExpert {
+        width: var.$full;
+        height: var.$full;
+        object-fit: var.$object-cover;
+      }
+
+      .expertCard {
+        width: 422px;
+        height: 113px;
+        display: var.$flex;
+        align-items: var.$center;
+        margin: var.$auto;
+        position: var.$absolute;
+        bottom: 62px;
+        left: -15px;
+        right: 0px;
+
+        @media screen and (max-width: var.$xl-screen) {
+          width: 100%;
+          max-width: 500px;
+          height: 150px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        @media screen and (max-width: var.$laptop-screen) {
+          bottom: 15px;
+        }
+
+        @media screen and (max-width: var.$l-tablet) {
+          bottom: 56px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+          max-width: 400px;
+          height: 120px;
+          bottom: 67px;
+          left: 1px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+          height: 86px;
+          padding: 0px;
+          max-width: 262px;
+          bottom: 67px;
+          left: 1px;
+        }
+
+        .fileSmartWrap {
+          width: 113px;
+          background: color.$blue;
+          height: var.$full;
+          display: var.$inline-flex;
+          justify-content: var.$flex-between;
+          flex-direction: var.$flex-col;
+          padding: 0px 15px 12px 11px;
+          align-items: var.$start;
+
+          @media screen and (max-width: var.$xl-screen) {
+            width: 150px;
+          }
+
+          @media screen and (max-width: var.$mobile-l) {
+            min-width: 86px;
+            padding: 6.5px;
+          }
+
+          .expertLogoText {
+            font-weight: var.$font-light;
+            line-height: 17px;
+            position: var.$relative;
+            font-size: 17.8px;
+            bottom: 1px;
+            letter-spacing: 1px;
+            color: color.$white;
+
+            @media screen and (max-width: var.$mobile-l) {
+              font-size: 12px;
+              line-height: 12px;
+              bottom: 3px;
+            }
+
+            span {
+              font-size: 18px;
+              line-height: 17px;
+              font-weight: var.$font-semibold;
+
+              @media screen and (max-width: var.$mobile-l) {
+                font-size: 12px;
+                position: var.$relative;
+                bottom: 2px;
+              }
+            }
+          }
+
+          .iconCheck {
+            min-width: 30px !important;
+            max-width: 30px !important;
+            height: 30px;
+            display: var.$inline-block;
+            margin-bottom: 26px;
+            object-fit: var.$contain;
+            margin-left: 0px !important;
+
+            @media screen and (max-width: var.$mobile-l) {
+              margin: 0px !important;
+              min-width: 22px !important;
+              max-width: 22px !important;
+              bottom: 4px !important;
+              top: var.$auto !important;
+            }
+          }
+
+          .iconFileSmart {
+            width: 144px;
+            object-fit: var.$contain;
+          }
+        }
+
+        .expertDetail {
+          width: 400px;
+          height: var.$full;
+          padding: 28px 24px 12px 14px;
+          display: var.$flex;
+          align-items: var.$start;
+          justify-content: var.$center;
+          flex-direction: var.$flex-col;
+          background: color.$white;
+
+          @media screen and (max-width: var.$xl-screen) {
+            padding: 15px;
+          }
+
+          @media screen and (max-width: var.$mobile-l) {
+            padding: 21px 9px 12px 9px;
+          }
+
+          .expertName {
+            font-weight: var.$font-medium;
+            font-size: 15.82px;
+            line-height: 20px;
+            display: var.$block;
+            margin-top: 1px;
+            text-align: var.$left;
+            font-family: var.$font-metropolis;
+            margin-left: 5px;
+            position: var.$relative;
+            top: 3px;
+
+            @media screen and (max-width: var.$mobile-l) {
+              font-size: 12px;
+              line-height: 12px;
+              margin-top: 0px;
+              top: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

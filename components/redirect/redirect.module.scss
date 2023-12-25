@@ -1,0 +1,19 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+.container {
+    width: var.$full;
+    max-width: 559px;
+    margin: var.$auto;
+    text-align: var.$center;
+    padding: 60px 50px 100px 50px;
+    font-size: 26px;
+    line-height: 36px;
+    height: 100vh;
+    display: var.$flex;
+    flex-direction: var.$flex-col;
+    justify-content: var.$center;
+    align-items: var.$center;
+    gap: 15px;
+    font-family: var.$font-metropolis;
+    font-weight: var.$font-semibold;
+}

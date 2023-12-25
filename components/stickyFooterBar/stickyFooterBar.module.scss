@@ -1,0 +1,132 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.stickyfooter {
+    display: var.$flex;
+    flex-direction: var.$flex-col;
+    justify-content: var.$center;
+    align-items: var.$center;
+    background: color.$dark-blue;
+    height: 110px;
+    width: 100%;
+    position: var.$fixed;
+    z-index: 9;
+    bottom: 0px;
+    padding: 24px;
+
+    @media screen and (max-width: var.$reg-tablet) {
+        height: var.$auto;
+        padding: 8px 24px 12px;
+    }
+
+    &.resBtnWrapper {
+        transition: all ease 0.5s;
+
+        .btn {
+            height: 46px;
+            font-weight: var.$font-semibold;
+            font-size: 20px;
+            line-height: 29px;
+            box-shadow: 0px 10px 0px color.$yellow, 0px 18px 0px -4px color.$spring-green;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            position: var.$fixed;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 99;
+        }
+    }
+
+    .stickyfooterbox {
+        display: var.$flex;
+        align-items: var.$center;
+        width: 100%;
+        justify-content: var.$end;
+        max-width: 1041px;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            flex-wrap: var.$wrap;
+        }
+
+        .stickyfooterp1 {
+            float: var.$left;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                width: var.$full;
+                float: var.$d-none;
+                text-align: var.$center;
+                margin-bottom: 8px;
+            }
+
+            h6 {
+                font-weight: var.$font-semibold;
+                font-size: 28px;
+                line-height: 140%;
+                color: color.$white;
+
+                @media screen and (max-width: var.$reg-tablet) {
+                    font-size: 18px;
+                    line-height: 25.2px;
+                }
+            }
+        }
+        sup {
+            font-size: 14px;
+        }
+
+        .stickyfooterp2 {
+            float: var.$left;
+            margin-left: 26px;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                float: var.$d-none;
+                margin: var.$auto;
+            }
+
+            button {
+                width: 253px;
+                height: 60px;
+                background: color.$light-yellow;
+                border-radius: 4px;
+                font-weight: var.$font-semibold;
+                font-size: 30px;
+                line-height: 24px;
+                border: var.$d-none;
+                color: color.$white;
+                cursor: var.$cursor-pointer;
+                color: color.$vulcan;
+                transition: all ease-in-out 0.5s;
+
+                @media screen and (max-width: var.$reg-tablet) {
+                    width: 156px;
+                    height: 37px;
+                    font-size: 18px;
+                    line-height: 14.8px;
+                }
+
+                &:hover {
+                    transition: all ease-in-out 0.5s;
+                    background: color.$tangerine-yellow;
+                }
+
+                &:active {
+                    background: color.$candlelight;
+                    transition: all ease-in-out 0.5s;
+                }
+
+                &:disabled {
+                    background: color.$light-gray;
+                    transition: all ease-in-out 0.5s;
+                    color: color.$white;
+                    transform: translateY(0px);
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+}

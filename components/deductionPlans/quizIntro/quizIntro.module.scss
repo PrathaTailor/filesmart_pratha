@@ -1,0 +1,262 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    display: var.$flex;
+    justify-content: var.$center;
+    align-items: var.$center;
+    width: var.$full;
+    margin: var.$auto;
+    max-height: 100vh;
+    overflow: hidden;
+
+    @media screen and (max-width: var.$reg-tablet) {
+        flex-wrap: var.$wrap;
+        max-height: var.$full;
+    }
+
+    @media screen and (max-width: 575px) {
+        padding: 16px;
+    }
+
+    .left {
+        width: var.$full;
+        flex: 1;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            max-width: var.$full;
+            order: 2;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 575px) {
+            margin-top: 16px;
+        }
+
+        .block {
+            width: var.$full;
+            max-width: 633px;
+            margin-left: 160px;
+
+            @media screen and (max-width: var.$xl-screen) {
+                margin-left: 0px;
+                margin-right: 0px;
+                max-width: var.$full;
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+
+            @media screen and (max-width: var.$xl-tablet) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            @media screen and (max-width: 575px) {
+                padding: 0px;
+            }
+
+            .title {
+                color: color.$blue;
+                font-weight: var.$font-semibold;
+                font-size: 64px;
+                line-height: 67px;
+                margin-bottom: 37px;
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 50px;
+                    line-height: 55px;
+                }
+
+                @media screen and (max-width: var.$l-tablet) {
+                    font-size: 40px;
+                    line-height: 50px;
+                    margin-bottom: 15px;
+                }
+
+                @media screen and (max-width: 575px) {
+                    font-size: 22px;
+                    line-height: 24px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            p {
+                font-weight: var.$font-normal;
+                font-size: 40px;
+                line-height: 50px;
+                color: color.$black-pearl;
+                margin-bottom: 44.45px;
+
+                @media screen and (max-width: var.$l-tablet) {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+
+                @media screen and (max-width: 575px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin-bottom: 32px;
+                }
+            }
+
+            .btn {
+                width: var.$full;
+                max-width: 401px;
+                height: 88px;
+                background: color.$light-yellow;
+                box-shadow: 0px 4px 0px color.$yellow, 0px 8px 0px -4px rgba(255, 184, 0, 0.19);
+                border-radius: 12px;
+                font-weight: var.$font-bold;
+                font-size: 32px;
+                line-height: 24px;
+                color: color.$vulcan;
+                display: var.$flex;
+                align-items: var.$center;
+                justify-content: var.$center;
+                border: var.$d-none;
+                cursor: var.$cursor-pointer;
+
+                &:hover {
+                    transition: all ease-in-out 0.5s;
+                    background: color.$tangerine-yellow;
+                }
+
+                &:active {
+                    background: color.$candlelight;
+                    box-shadow: 0px 2px 0px color.$persian-green, 0px 8px 0px -4px color.$cream-and-butter;
+                    transition: all ease-in-out 0.5s;
+                    transform: translateY(2px);
+                }
+
+                &:disabled {
+                    background: color.$light-gray;
+                    box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+                    transition: all ease-in-out 0.5s;
+                    color: color.$white;
+                    transform: translateY(0px);
+                }
+
+                @media screen and (max-width: var.$l-tablet) {
+                    height: 50px;
+                    max-width: 241px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    box-shadow: 0px 4px 0px #c9a31f, 0px 8px 0px -4px rgba(255, 184, 0, 0.19);
+                }
+
+                .btnText {
+                    display: var.$inline-block;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .right {
+        width: var.$full;
+        max-width: 685px;
+        position: var.$relative;
+        height: 100vh;
+
+        @media screen and (max-width: var.$laptop-screen) {
+            max-width: 474px;
+        }
+
+        @media screen and (max-width: var.$l-tablet) {
+            max-width: 400px;
+        }
+
+        @media screen and (max-width: var.$reg-tablet) {
+            max-width: var.$full;
+            order: 1;
+            height: var.$auto;
+            display: var.$flex;
+        }
+
+        .banner {
+            width: var.$full;
+            object-fit: var.$cover;
+            height: var.$full;
+        }
+
+        .box {
+            padding: 60px 55px;
+            background: rgba(15, 30, 255, 0.8);
+            position: var.$absolute;
+            bottom: 0px;
+            width: var.$full;
+
+            @media screen and (max-width: var.$laptop-screen) {
+                padding: 40px 50px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                position: var.$relative;
+                align-items: var.$center;
+                display: var.$flex;
+                justify-content: var.$center;
+                flex-direction: var.$flex-col;
+                padding: 15px 17.5px;
+                min-width: 206px;
+            }
+
+            &:before {
+                position: var.$absolute;
+                content: '';
+                background-image: url('../../../images/assets/quiz-banner-bar.png');
+                width: 53px;
+                height: 118px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 0;
+                right: 36.21px;
+
+                @media screen and (max-width: var.$l-tablet) {
+                    width: 30px;
+                    height: 70px;
+                }
+
+                @media screen and (max-width: 575px) {
+                    width: 15px;
+                    height: 35px;
+                    right: 10.91px;
+                }
+            }
+
+            p {
+                font-size: 34px;
+                line-height: 40px;
+                color: color.$white;
+                margin-bottom: 16px;
+
+                @media screen and (max-width: var.$l-tablet) {
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+
+                @media screen and (max-width: 575px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .yellowTxt {
+                font-weight: var.$font-extrabold;
+                font-size: 34px;
+                line-height: 40px;
+                color: color.$light-yellow;
+
+                @media screen and (max-width: var.$l-tablet) {
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+
+                @media screen and (max-width: 575px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}

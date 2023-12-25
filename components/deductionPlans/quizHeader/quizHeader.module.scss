@@ -1,0 +1,97 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    // max-width: 1146px;
+    // padding: 16px 17px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+
+    .content {
+        display: var.$flex;
+        align-items: var.$center;
+        position: absolute;
+        width: 100%;
+        padding: 16px 17px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        // z-index: 9;
+
+        @media screen and (max-width: 1024px) {
+            position: relative;
+        }
+
+        .logo {
+            padding-right: 46px;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                padding-right: 18px;
+                min-height: 40px;
+                min-width: 40px;
+                max-width: 70px;
+            }
+        }
+
+        .headerContent {
+            font-family: var.$font-metropolis;
+
+            .topContent {
+                font-weight: var.$font-semibold;
+                font-size: 17px;
+                line-height: 17px;
+                letter-spacing: 0.24em;
+                color: color.$blue;
+
+                @media screen and (max-width: var.$reg-screen) {
+                    font-size: 10px;
+                    line-height: 10px;
+                }
+            }
+
+            .bottomContent {
+                font-size: 24px;
+                line-height: 24px;
+                color: color.$vulcan;
+                margin-top: 7px;
+
+                @media screen and (max-width: var.$reg-screen) {
+                    font-size: 14px;
+                    line-height: 110%;
+                    max-width: 189px;
+                }
+            }
+        }
+
+        .closeBtnWrapper {
+            cursor: var.$cursor-pointer;
+            margin-left: var.$auto;
+            position: relative;
+
+            // display: var.$d-none;
+            @media screen and (max-width: var.$reg-tablet) {
+                display: var.$block;
+                padding-left: 12px;
+                position: static;
+            }
+
+            .closeBtnContent {
+                background: color.$white;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                padding: 8px 6px 0px 6px;
+                position: absolute;
+                height: 36px;
+                right: 10px;
+                z-index: 1;
+                width: 34px;
+                top: -25px;
+
+                @media screen and (max-width: var.$reg-tablet) {
+                    position: static;
+                    height: 24px;
+                    width: 24px;
+                    padding: 6px;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

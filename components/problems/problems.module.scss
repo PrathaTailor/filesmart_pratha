@@ -1,0 +1,265 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.problemsContainer {
+    width: var.$full;
+    max-width: 1214px;
+    margin: 80px var.$auto;
+    background-color: color.$lavender;
+    padding: 38px 40px 86px;
+
+    @media screen and (max-width: var.$phablet) {
+        padding: 30px 32px;
+        margin: 0px var.$auto;
+    }
+
+    @media screen and (max-width: var.$mobile-reg) {
+        padding: 30px 16px;
+        margin: 0px var.$auto;
+    }
+
+    .title {
+        font-size: 34px;
+        line-height: 42px;
+        text-align: var.$center;
+        font-weight: var.$font-semibold;
+        margin: 0px var.$auto 43px;
+
+        @media screen and (max-width: var.$xl-screen) {
+            font-size: 34px;
+            line-height: 44px;
+        }
+
+        @media screen and (max-width: var.$laptop-screen) {
+            font-size: 34px;
+            line-height: 44px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            text-align: var.$center;
+            margin: 0px var.$auto 30px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            font-size: 28px;
+            line-height: 35px;
+        }
+    }
+
+    .cards {
+        display: var.$flex;
+        align-items: var.$start;
+        flex-wrap: var.$wrap;
+        width: var.$full;
+        max-width: 1134px;
+        justify-content: var.$flex-between;
+        gap: 37px;
+        justify-content: flex-start;
+
+
+        @media screen and (max-width: var.$laptop-screen) {
+            justify-content: var.$flex-between;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+            width: var.$full;
+            max-width: var.$full;
+            margin: 0px var.$auto;
+            gap: 30px;
+        }
+
+        @media screen and (max-width: var.$mobile-reg) {
+            margin: 0px var.$auto;
+            gap: 30px;
+            width: var.$full;
+            max-width: var.$full;
+
+        }
+        .card {
+            width: var.$full;
+            max-width: 353px;
+
+            @media screen and (max-width: var.$xl-screen) {
+                width: var.$half;
+            }
+
+            @media screen and (max-width: var.$laptop-screen) {
+                width: var.$full;
+                max-width: 30%;
+            }
+
+            @media screen and (max-width: var.$xl-tablet) {
+                width: var.$full;
+                max-width: var.$full;
+                padding: 0px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                padding: 0px;
+            }
+
+            .cardTitle {
+                color: color.$vulcan;
+                margin-bottom: 8px;
+                position: var.$relative;
+
+                @media screen and (max-width: var.$laptop-screen) {
+                    margin-bottom: 15px;
+                }
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    margin-bottom: 8px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    flex-wrap: var.$wrap;
+                    margin-bottom: 10px;
+                }
+
+                .cardIcon {
+                    display: var.$inline-block;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                            top: 50% !important;
+                            position: var.$absolute !important;
+                            height: 35px !important;
+                            transform: translate(0, -(var.$half));
+                            left: 0px !important;
+                            bottom: var.$auto !important;
+                        }
+                                                @media screen and (max-width: var.$phablet) {
+                                                    height: 44px !important;
+                                                }
+
+                    img {
+                        width: 50px !important;
+                        height: 50px !important;
+                        min-width: 50px !important;
+                        min-height: 50px !important;
+                        object-fit: var.$contain;
+
+                        @media screen and (max-width: var.$xl-screen) {
+                            width: 45px !important;
+                            height: 45px !important;
+                            min-width: 45px !important;
+                            min-height: 45px !important;
+                        }
+
+                        @media screen and (max-width: var.$laptop-screen) {
+                            width: 35px !important;
+                            height: 35px !important;
+                            min-width: 35px !important;
+                            min-height: 35px !important;
+                        }
+
+                        @media screen and (max-width: var.$phablet) {
+                            width: 44px !important;
+                            height: 44px !important;
+                            min-width: 44px !important;
+                            min-height: 44px !important;
+                        }
+                    }
+                }
+
+                .cardText {
+                    display: var.$block;
+                    max-width: 312px;
+                    font-size: 20px;
+                    line-height: 26px;
+                    font-family: var.$font-metropolis;
+                    overflow: var.$hidden;
+                    margin-top: 20px;
+                    min-height: 50px;
+                    font-weight: var.$font-medium;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        max-width: var.$full;
+                        margin-top: 5px;
+                        min-height: var.$auto;
+                        margin-left: 55px;
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        width: var.$full;
+                        margin-top: 4px !important;
+                    }
+                }
+            }
+
+            .cardDesc {
+                font-size: 18px;
+                line-height: 25px;
+                color: color.$vulcan;
+                font-family: var.$font-metropolis;
+                font-weight: var.$font-light;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    padding-left: 55px;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .card:nth-child(1) {
+            .cardText {
+                max-width: 237px;
+                margin-top: 10px;
+                @media screen and (max-width: var.$xl-tablet) {
+                    margin-top: 0px;
+                }
+            }
+
+            .cardIcon {
+                position: relative;
+                top: -4px;
+
+                @media screen and (max-width: var.$phablet) {
+                    position: relative;
+                    top: 0px;
+                }
+            }
+        }
+
+        .card:nth-child(2) {
+            .cardIcon {
+                position: relative;
+                left: -9px;
+                bottom: 3px;
+            }
+
+            .cardText {
+                max-width: 300px;
+                margin-top: 10px;
+                @media screen and (max-width: var.$xl-tablet) {
+                        margin-top: 0px;
+                    }
+                @media screen and (max-width: var.$phablet) {
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .card:nth-child(3) {
+            .cardIcon {
+                position: relative;
+                left: 4px;
+                top: -4px;
+            }
+
+            .cardText {
+                max-width: 400px;
+                margin-top: 10px;
+
+                @media screen and (max-width: var.$phablet) {
+                    margin-top: 0px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,357 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.container {
+    margin: 52px var.$auto 40px var.$auto;
+    width: 100%;
+    max-width: var.$xxl-screen;
+    padding-left: 0px;
+    padding-right: 15px;
+
+    @media screen and (max-width: var.$xl-screen) {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 60px var.$auto 60px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin: 27px var.$auto 30px;
+    }
+
+    .title {
+        text-align: var.$center;
+        font-weight: var.$font-semibold;
+        font-size: 60px;
+        line-height: 60px;
+        max-width: 1024px;
+        margin: 0px var.$auto 53px var.$auto;
+
+        @media screen and (max-width: var.$xl-screen) {
+            font-size: var.$title-xxl;
+            line-height: var.$leading-xxl;
+            margin: 0px var.$auto 10px;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+            font-size: var.$title-xl;
+            line-height: 50px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 15px;
+            max-width: 290px;
+        }
+
+        span {
+            color: color.$blue;
+        }
+
+        i {
+            font-style: var.$not-italic;
+            position: var.$relative;
+            left: 6px;
+
+            @media screen and (max-width: var.$phablet) {
+                left: 0px
+            }
+        }
+    }
+
+    .subTitle {
+        color: color.$vulcan;
+        font-size: 24px;
+        line-height: 30px;
+        font-family: var.$font-metropolis;
+        max-width: 556px;
+        margin: var.$auto;
+        text-align: var.$center;
+        letter-spacing: 0.02em;
+        font-weight: var.$font-light;
+        padding-left: 14px;
+
+        span {
+            position: var.$relative;
+            left: -3px;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            font-size: 16px;
+            line-height: 22px;
+            padding: 0px 15px;
+        }
+    }
+
+    .btnContainer {
+        margin-top: 31.5px;
+        text-align: var.$center;
+
+        @media screen and (max-width: var.$phablet) {
+            margin-top: 28px;
+        }
+
+        .btn {
+            background: color.$light-yellow;
+            box-shadow: 0px 4px 0px color.$yellow, 0px 8px 0px -4px rgb(255 184 0 / 19%);
+            border-radius: 12px;
+            font-weight: var.$font-bold;
+            font-size: 18px;
+            line-height: 22px;
+            padding: 14px 32px 12px;
+            display: var.$inline-flex;
+            justify-content: var.$center;
+            align-items: var.$center;
+            border: var.$border-none;
+            min-width: 191px;
+            margin-left: 15px;
+            cursor: var.$cursor-pointer;
+            transition: all ease-in-out 0.5s;
+            color: #0A0A14;
+
+            &:hover {
+                transition: all ease-in-out 0.5s;
+                background: color.$tangerine-yellow;
+            }
+
+            &:active {
+                background: color.$candlelight;
+                box-shadow: 0px 2px 0px color.$persian-green, 0px 8px 0px -4px color.$cream-and-butter;
+                transition: all ease-in-out 0.5s;
+                transform: translateY(2px);
+            }
+
+            &:disabled {
+                background: color.$light-gray;
+                box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+                transition: all ease-in-out 0.5s;
+                color: color.$white;
+                transform: translateY(0px);
+            }
+
+            @media screen and (max-width: var.$xl-tablet) {
+                font-size: 20px;
+                line-height: var.$leading-lg;
+                padding: 25px 40px;
+                height: 60px;
+            }
+
+            @media screen and (max-width: var.$phablet) {
+                font-size: 18px;
+                line-height: 24px;
+                padding: 14px 32px 12px;
+                min-width: 191px;
+                height: 48px;
+                margin-left: 0px;
+
+            }
+        }
+    }
+
+    .testimonial {
+        display: var.$flex;
+        justify-content: var.$flex-between;
+        margin: 34.4px var.$auto 0;
+        width: var.$full;
+        max-width: 682px;
+        padding: 33.6px 21.84px;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            margin: 30px var.$auto 0px;
+            flex-wrap: var.$wrap;
+            justify-content: var.$center;
+            width: var.$full;
+            max-width: 670px;
+            padding: 15px 22px 0px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            margin: 32px var.$auto 0px;
+            padding: 15px 22px 0px;
+        }
+
+        .person {
+            display: var.$flex;
+            width: var.$full;
+            max-width: 445px;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                flex-wrap: var.$wrap;
+                justify-content: var.$center;
+                width: var.$full;
+            }
+
+            .avatar {
+                width: 52px;
+                height: 52px;
+                position: var.$relative;
+                left: 8px;
+
+                @media screen and (max-width: var.$phablet) {
+                    width: 62px;
+                    height: 62px;
+                    left: 0px;
+
+                }
+
+                img {
+                    width: var.$full;
+                    border-radius: var.$half;
+                }
+            }
+
+            .personDetail {
+                padding-left: 17.92px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    width: var.$full;
+                    padding-left: 0px;
+                    margin-top: 14px;
+                }
+
+                .personQuote {
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: color.$vulcan;
+                    width: var.$full;
+                    max-width: 295px;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        width: var.$full;
+                        max-width: var.$full;
+                        text-align: var.$center;
+                    }
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 14px;
+                        line-height: 20px;
+                        max-width: 279px;
+                        margin: var.$auto;
+                        font-family: var.$font-metropolis;
+                    }
+
+                    span {
+                        color: color.$blue;
+                    }
+                }
+
+                .personPos {
+                    margin-top: 8.2px;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: color.$vulcan;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        text-align: var.$center;
+                        margin-top: 8px;
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        font-size: 12px;
+                        line-height: 12px;
+                        font-family: var.$font-metropolis;
+                    }
+
+                    span {
+                        font-weight: var.$font-medium;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+
+        .rating {
+            width: var.$full;
+            max-width: 183px;
+            height: var.$full;
+            min-height: 71px;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                padding-left: 0px;
+                text-align: var.$center;
+                width: var.$full;
+                max-width: var.$full;
+                margin: 27px var.$auto 0px;
+            }
+
+            .ratingStars {
+                display: var.$flex;
+                align-items: var.$center;
+                width: var.$full;
+                max-width: 157px;
+                justify-content: var.$flex-between;
+                margin: 0px 0px 6px 8px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    margin: 0px var.$auto 10px;
+                }
+
+                @media screen and (max-width: var.$mobile-l) {
+                    margin: 0px var.$auto 8px;
+                    width: var.$full;
+                    max-width: 108px;
+                }
+
+                .star {
+                    width: 24px;
+                    height: 24px;
+                    display: var.$inline-block;
+
+                    @media screen and (max-width: var.$phablet) {
+                        width: 16px !important;
+                        height: 16px !important;
+                        max-width: 16px !important;
+                        max-height: 16px !important;
+                        min-width: 16px !important;
+                        min-height: 16px !important;
+                        margin: 0px 3px;
+                    }
+                }
+            }
+
+            .ratingText {
+                font-weight: var.$font-semibold;
+                font-size: 20px;
+                line-height: 25px;
+                padding-left: 22px;
+
+                @media screen and (max-width: var.$phablet) {
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin-bottom: 5px;
+                }
+
+                @media screen and (max-width: var.$mobile-l) {
+                    padding-left: 0px;
+                }
+            }
+
+            .note {
+                font-size: 12px;
+                line-height: 15px;
+                padding-left: 10px;
+                position: var.$relative;
+                left: 9px;
+                top: 1px;
+
+                @media screen and (max-width: var.$phablet) {
+                    font-size: 12px;
+                    line-height: 12px;
+                    padding-left: 0px;
+                    font-weight: var.$font-normal;
+                    font-family: var.$font-metropolis;
+                    position: var.$relative;
+                    left: 0px;
+                    top: 1px;
+                }
+            }
+        }
+    }
+}

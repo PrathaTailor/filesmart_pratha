@@ -1,0 +1,149 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    padding: 50px 20px;
+
+    @media screen and (max-width: var.$xl-tablet) {
+        padding: 35.8px 30px 0px;
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+        padding: 0px 16px;
+    }
+
+    .wrapper {
+        width: var.$full;
+        max-width: 925px;
+        margin: var.$auto;
+        text-align: var.$center;
+        color: color.$vulcan;
+
+        .title {
+            font-weight: var.$font-semibold;
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 18px;
+            font-family: var.$font-rota;
+
+            @media screen and (max-width: var.$xl-screen) {
+                font-size: 60px;
+                line-height: 60px;
+                margin-bottom: 15px;
+            }
+
+            @media screen and (max-width: var.$xl-tablet) {
+                font-size: 50px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                font-size: 36px;
+                line-height: 42px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                margin-bottom: 11px;
+            }
+
+            span {
+                border-bottom: var.$border-4 var.$decoration-solid color.$blue;
+            }
+        }
+        sup {
+            font-size: 10px;
+        }
+        p {
+            font-weight: var.$font-light;
+            font-size: 24px;
+            line-height: 43.2px;
+            text-align: var.$center;
+            letter-spacing: 0.02em;
+            font-family: var.$font-metropolis;
+
+            @media screen and (max-width: var.$xl-screen) {
+                font-size: 20px;
+                line-height: 36px;
+                max-width: 774px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin-top: 11px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+
+        .banner {
+            margin-top: 19.47px;
+            margin-bottom: 39.04px;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                margin-top: 23.47px;
+                margin-bottom: 42.04px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin-top: 17.18px;
+                margin-bottom: 29.16px;
+            }
+        }
+        a {
+            text-decoration: var.$d-none;
+            color: color.$vulcan;
+        }
+        .btn {
+            font-weight: var.$font-semibold;
+            font-size: 30px;
+            line-height: 24px;
+            font-family: var.$font-rota;
+            width: var.$full;
+            max-width: 377px;
+            height: 70px;
+            background: color.$light-yellow;
+            border-radius: 8px;
+            border: var.$d-none;
+            transition: all ease 0.3s;
+            cursor: pointer;
+            margin-top: 35px;
+
+            &:hover {
+                background: color.$tangerine-yellow;
+                transition: all ease 0.3s;
+            }
+
+            &:disabled {
+                background: color.$light-gray;
+                transition: all ease 0.3s;
+                color: color.$white;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                height: 60px;
+            }
+        }
+    }
+
+    p {
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-light;
+        font-size: 32px;
+        line-height: 46px;
+        text-align: var.$center;
+        letter-spacing: 0.02em;
+        width: var.$full;
+        max-width: 1150px;
+        margin: 34px var.$auto 0px;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            font-size: 28px;
+            line-height: 41px;
+            margin-top: 44px;
+        }
+
+        @media screen and (max-width: var.$reg-tablet) {
+            margin-top: 37px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}

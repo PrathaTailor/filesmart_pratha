@@ -1,0 +1,19 @@
+.auth-wrap {
+  width: 100%;
+  max-width: 540px;
+  margin: 1rem auto 3rem;
+
+  > .ext-circle-loader {
+    margin: 0 auto;
+  }
+  
+  .ext-form {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

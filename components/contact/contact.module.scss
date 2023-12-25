@@ -1,0 +1,17 @@
+@use '../../styles/variable' as var;
+
+.contactUs {
+    min-height: 964px;
+    height: var.$auto;
+    .loaderWrapper {
+        position: var.$relative;
+        min-height: 964px;
+        height: var.$auto;
+        .loader {
+            position: var.$absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../../../styles/variable' as var;
+@use '../../../../styles/colors' as color;
+
+.button {
+    height: 72px;
+    padding: 24px 20px;
+    width: var.$full;
+    max-width: var.$quiz-button;
+    color: color.$white;
+    font-weight: var.$font-bold;
+    font-size: 29px;
+    line-height: 29px;
+    display: var.$inline-flex;
+    justify-content: var.$center;
+    align-items: var.$center;
+    border: 2px solid color.$blue;
+    background-color: color.$white;
+    color: color.$blue;
+    &.powder {
+        background-color: color.$powder;
+    }
+    &.lightBlue {
+        background-color: color.$light-blue;
+        color: color.$white;
+    }
+}

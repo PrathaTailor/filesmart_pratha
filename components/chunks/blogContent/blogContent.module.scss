@@ -1,0 +1,48 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  width: var.$full;
+  padding: 0px 20px 12px;
+  max-width: 718px;
+  margin: var.$auto;
+
+  p {
+    font-weight: var.$font-normal;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: color.$black-pearl;
+    font-family: 'Metropolis';
+
+    br {
+      display: none;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  ol,
+  ul {
+    li {
+      margin-bottom: 12px;
+      font-family: 'Metropolis';
+    }
+  }
+
+  a {
+    color: color.$blue;
+    font-weight: var.$font-bold;
+  }
+
+  td {
+    width: var.$half;
+  }
+
+  tr {
+    display: var.$flex;
+    gap: 6px;
+  }
+}

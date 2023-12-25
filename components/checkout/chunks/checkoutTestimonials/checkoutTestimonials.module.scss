@@ -1,0 +1,121 @@
+@use '../../../../styles/variable' as var;
+@use '../../../../styles/colors' as color;
+
+.container {
+    width: var.$full;
+    max-width: 417px;
+    margin-bottom: 44px;
+    .testimonailTitle {
+        font-family: var.$font-rota;
+        font-weight: var.$font-bold;
+        font-size: var.$text-reg;
+        line-height: 55px;
+        color: color.$black-pearl;
+        text-align: var.$center;
+    }
+    .reviewsWrapper {
+        display: var.$flex;
+        align-items: var.$center;
+        justify-content: var.$center;
+        gap: 12px;
+        .stars {
+            img {
+                padding-left: 5px !important;
+            }
+        }
+    }
+    .reviews {
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-semibold;
+        font-size: 14px;
+        line-height: 22px;
+        color: color.$vulcan;
+    }
+    .ProfileWrapper {
+        font-family: var.$font-metropolis;
+        display: var.$flex;
+        gap: 16px;
+        margin-top: 32px;
+        @media only screen and (max-width: var.$reg-tablet) {
+            flex-direction: var.$flex-col;
+            align-items: var.$center;
+        }
+
+        .ProfileImage {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            border-radius: var.$half;
+            @media only screen and (max-width: var.$reg-tablet) {
+                order: 2;
+            }
+            img {
+                width: 100%;
+                object-fit: var.$object-cover;
+                object-position: var.$center;
+            }
+        }
+        .profileContent {
+            @media only screen and (max-width: var.$reg-tablet) {
+                order: 1;
+            }
+        }
+        .ratingTitle {
+            font-weight: var.$font-bold;
+            font-size: 18px;
+            line-height: 26px;
+            color: color.$black-russian;
+            @media only screen and (max-width: var.$reg-tablet) {
+                text-align: var.$center;
+            }
+        }
+        .ratingContent {
+            font-weight: var.$font-medium;
+            font-size: 16px;
+            line-height: 22px;
+            color: color.$dim-gray;
+            @media only screen and (max-width: var.$reg-tablet) {
+                text-align: var.$center;
+            }
+        }
+        .reviewerName {
+            font-weight: var.$font-semibold;
+            font-size: 16px;
+            line-height: 20px;
+            color: color.$vulcan;
+            margin-top: 8px;
+            @media only screen and (max-width: var.$reg-tablet) {
+                display: var.$d-none;
+            }
+        }
+        .country {
+            font-weight: var.$font-semibold;
+            font-size: 16px;
+            line-height: 20px;
+            color: color.$dim-gray;
+            @media only screen and (max-width: var.$reg-tablet) {
+                display: var.$d-none;
+            }
+        }
+        .reviewerContent {
+            display: var.$d-none;
+            @media only screen and (max-width: var.$reg-tablet) {
+                display: var.$block;
+                order: 3;
+            }
+            .reviewerNameMobile {
+                font-weight: var.$font-semibold;
+                font-size: 16px;
+                line-height: 20px;
+                color: color.$vulcan;
+                margin-top: 8px;
+            }
+            .countryMobile {
+                font-weight: var.$font-semibold;
+                font-size: 16px;
+                line-height: 20px;
+                color: color.$dim-gray;
+            }
+        }
+    }
+}

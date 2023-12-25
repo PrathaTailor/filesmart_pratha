@@ -1,0 +1,118 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.taxFilingWrapper {
+    max-width: 718px;
+    margin: var.$auto;
+    display: var.$flex;
+    align-items: var.$center;
+    padding: 34px 20px;
+
+    @media screen and (max-width: var.$mobile-l) {
+        padding: 20px 24px;
+    }
+
+    @media screen and (max-width:var.$reg-tablet) {
+        flex-wrap: var.$wrap;
+    }
+
+    .taxDeadline {
+        display: var.$flex;
+        align-items: var.$center;
+
+        @media screen and (max-width:var.$reg-tablet) {
+            width: var.$full;
+        }
+
+        .iconTaxFiling {
+            width: 64px;
+            @media screen and (max-width: var.$mobile-l) {
+                width: 40px;
+                height: 40px;
+                object-fit: var.$contain;
+            }
+        }
+
+        .taxFilingDesc {
+            font-size: 28px;
+            line-height: 105.5%;
+            font-weight: var.$font-bold;
+            font-family: var.$font-rota;
+            color: color.$vulcan;
+            margin-left: 16px;
+            max-width: 303px;
+
+            @media screen and (max-width:var.$reg-tablet) {
+                max-width: var.$full;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            span {
+                color: color.$blue;
+            }
+        }
+    }
+
+    .taxFilingInteraction {
+        @media screen and (max-width: var.$reg-tablet) {
+            width: var.$full;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background: color.$blue;
+            font-family: var.$font-rota;
+            font-weight: var.$font-black;
+            font-size: 18px;
+            line-height: 18px;
+            width: var.$full;
+            max-width: 261px;
+            border: var.$d-none;
+            display: var.$flex;
+            align-items: var.$center;
+            cursor: var.$cursor-pointer;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin: var.$auto;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                max-width: var.$full;
+                justify-content: var.$flex-between;
+                padding: 12px 52px 12px 20px;
+            }
+
+            .btnText {
+                text-align: var.$left;
+                font-family: var.$font-rota;
+                display: var.$inline-block;
+                margin-right: 16px;
+
+                .lg {
+                    display: var.$block;
+                    color: color.$white;
+
+                    label {
+                        display: var.$block;
+                        color: color.$light-yellow;
+                    }
+                }
+
+                .sm {
+                    display: var.$block;
+                    font-weight: var.$font-medium;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: color.$white;
+                    font-family: var.$font-rota;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}

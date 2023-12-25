@@ -1,0 +1,121 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.bar {
+    background: linear-gradient(92.93deg, color.$blue 1.23%, color.$black-pearl 95.4%);
+    height: 48px;
+    display: var.$flex;
+    justify-content: var.$center;
+    font-weight: var.$font-medium;
+    font-size: 18px;
+    line-height: 18px;
+    color: color.$white;
+    align-items: var.$center;
+    font-family: var.$font-metropolis;
+    position: fixed;
+    transition: all ease 0.5s;
+    top: 0px;
+    width: var.$full;
+    z-index: 999;
+
+    @media screen and (max-width: var.$xl-tablet) {
+        padding: 13px 36px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        height: 60px;
+        padding: 13px 36px;
+        text-align: var.$center;
+        font-weight: var.$font-normal;
+        font-size: 12px;
+        line-height: 19px;
+        display: var.$block;
+    }
+
+    @media screen and (max-width: var.$mobile-sm) {
+        padding: 13px 35px 13px 13px;
+    }
+
+    button {
+        background: color.$light-yellow;
+        border-radius: 5px;
+        height: 34px;
+        padding: 8px 23.5px;
+        text-align: var.$center;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        color: color.$lime-green;
+        border: var.$d-none;
+        display: var.$inline-flex;
+        align-items: var.$center;
+        justify-content: var.$center;
+        margin-left: 20px;
+        cursor: var.$cursor-pointer;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            padding: 4px 10px;
+            height: 18px;
+            font-size: 10px;
+            line-height: 10px;
+            margin-left: 0px;
+        }
+
+        span {
+            display: var.$inline-block;
+            margin-right: 4px;
+        }
+
+        .icon {
+            display: var.$inline-block;
+            margin-left: 4px;
+        }
+
+        & + span {
+            position: var.$absolute !important;
+            right: 16px;
+            top: var.$half;
+            transform: translate(0, -(var.$half));
+
+            img {
+                @media screen and (max-width: var.$mobile-reg) {
+                    width: 8px !important;
+                }
+            }
+        }
+    }
+
+    &.close {
+        margin-top: -50px;
+        transition: all ease 0.5s;
+
+        @media screen and (max-width: var.$phablet) {
+            margin-top: -60px;
+        }
+    }
+    .btnWrapper {
+        position: var.$absolute;
+        right: 15px;
+        bottom: 13px;
+        cursor: var.$cursor-pointer;
+
+        @media screen and (max-width: var.$phablet) {
+            bottom: 17px;
+        }
+    }
+}
+.announcement {
+    padding-top: 48px;
+    transition: all ease 0.5s;
+}
+.noAnnouncement {
+    display: none;
+}

@@ -1,0 +1,133 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.counterWrapper {
+    // margin-top: 50px;
+    text-align: var.$center;
+    // margin-bottom: 50px;
+
+    @media screen and (max-width: var.$mobile-l) {
+        margin: 26px var.$auto 40px;
+    }
+
+    .counterText {
+        font-size: 12px;
+        line-height: 12px;
+        color: color.$black-pearl;
+        display: var.$inline-flex;
+        align-items: var.$center;
+        justify-content: var.$center;
+        padding: 7px 10px;
+        background: rgba(15, 30, 255, 0.11);
+        border-radius: 3.528px;
+        margin-bottom: 12px;
+        font-family: var.$font-metropolis;
+
+        @media screen and (max-width: var.$mobile-l) {
+            font-size: 18px;
+            line-height: 18px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: var.$mobile-sm) {
+            font-size: 16px;
+        }
+
+        p {
+            font-weight: var.$font-normal;
+            padding-left: 8px;
+
+            span {
+                font-weight: var.$font-semibold;
+            }
+
+
+            @media screen and (max-width: var.$mobile-l) {
+                padding-left: 11.5px;
+            }
+        }
+
+    }
+
+}
+
+.expiredNotice {
+    text-align: var.$center;
+    padding: 0px;
+    border-radius: 0.25rem;
+    margin: 15px var.$auto 60px;
+
+    span {
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: var.$font-bold;
+
+    }
+
+    p {
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-medium;
+        font-size: 22px;
+        line-height: 26px;
+        width: var.$full;
+        max-width: 905px;
+        margin: 25px var.$auto 0px;
+    }
+}
+
+.showCounter {
+    // padding: 0.5rem;
+    justify-content: var.$center;
+    align-items: var.$center;
+    display: var.$flex;
+
+    .dots {
+        font-weight: var.$font-medium;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: var.$font-metropolis;
+
+        @media screen and (max-width: var.$mobile-l) {
+            font-size: 28px;
+            line-height: 28px;
+        }
+    }
+
+    .countdown {
+        line-height: 1.25rem;
+        padding: 0 11px;
+        align-items: var.$center;
+        display: var.$flex;
+        flex-direction: var.$flex-col;
+
+        p {
+            margin: 0px 0px 4px;
+            font-weight: var.$font-medium;
+            font-size: 20px;
+            line-height: 20px;
+            font-family: var.$font-metropolis;
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 28px;
+                line-height: 28px;
+                margin: 0px 0px 6px;
+            }
+        }
+
+        span {
+            font-size: 10px;
+            line-height: 10px;
+            color: color.$dim-gray;
+            font-family: var.$font-metropolis;
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+
+        &.danger {
+            color: color.$persian-rose;
+        }
+    }
+}

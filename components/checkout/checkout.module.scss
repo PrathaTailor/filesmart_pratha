@@ -1,0 +1,20 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.container {
+    max-width: 1216px;
+    width: var.$full;
+    margin: var.$auto;
+    .wrapper {
+        display: var.$flex;
+        justify-content: var.$center;
+        gap: 83px;
+        .left {
+            background: color.$white;
+            box-shadow: 0.72px 1.44px 14.4px rgba(0, 0, 0, 0.15);
+            padding: 40px 67px;
+            margin: var.$auto 0 40px;
+        }
+    }
+    
+}

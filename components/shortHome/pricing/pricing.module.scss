@@ -1,0 +1,174 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.fluid {
+    padding: 60px 20px 75px;
+    background: color.$blue;
+
+    @media screen and (max-width: var.$phablet) {
+        padding: 30px 16px 68px;
+    }
+
+    .container {
+        .title {
+            font-family: var.$font-rota;
+            font-weight: var.$font-semibold;
+            font-size: 40px;
+            line-height: 50px;
+            text-align: var.$center;
+            letter-spacing: 0.02em;
+            color: color.$white;
+            padding-bottom: 57px;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                font-size: 32px;
+                line-height: 46px;
+                padding-bottom: 41px;
+            }
+
+            @media screen and (max-width: var.$phablet) {
+                font-size: 28px;
+                line-height: 39px;
+                padding-bottom: 29px;
+            }
+        }
+
+        .wrapper {
+            display: var.$flex;
+            gap: 115px;
+            justify-content: var.$center;
+            align-items: var.$start;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                gap: 0px;
+                flex-wrap: var.$wrap;
+                flex-direction: var.$flex-col;
+                align-items: var.$center;
+            }
+
+            .box {
+                width: var.$full;
+                max-width: 425px;
+                padding: 24px;
+                background: color.$white;
+                border: 1px solid color.$blue;
+                border-radius: 16px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    margin-top: 61px;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    margin-top: 47px;
+                }
+
+                &:first-child {
+                    @media screen and (max-width: var.$xl-tablet) {
+                        margin-top: 0px;
+                    }
+                }
+
+                .boxTitle {
+                    font-weight: var.$font-semibold;
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: color.$maire;
+                    margin-bottom: 16px;
+                }
+                .priceCont {
+                    display: var.$flex;
+                }
+
+                .pricingWrapper {
+                    font-weight: var.$font-medium;
+                    font-size: 22px;
+                    line-height: 24px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    margin-bottom: 16px;
+
+                    span {
+                        display: var.$inline-block;
+                        margin-right: 8px;
+                        font-weight: var.$font-semibold;
+                        font-size: 48px;
+                        line-height: 60px;
+                        letter-spacing: -0.02em;
+                        color: color.$maire;
+                    }
+                }
+
+                .noFees {
+                    font-weight: var.$font-medium;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 16px;
+                }
+
+                .btn {
+                    height: 52px;
+                    background: color.$light-yellow;
+                    border-radius: 8px;
+                    font-weight: var.$font-semibold;
+                    font-size: 24px;
+                    line-height: 24px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    justify-content: var.$center;
+                    width: var.$full;
+                    border: var.$d-none;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: color.$tangerine-yellow;
+                        transition: all ease 0.3s;
+                    }
+
+                    &:disabled {
+                        background: color.$light-gray;
+                        transition: all ease 0.3s;
+                        color: color.$white;
+                    }
+                }
+
+                .features {
+                    display: var.$flex;
+                    flex-direction: var.$flex-col;
+                    align-items: var.$start;
+                    padding: 0px;
+                    gap: 16px;
+                    list-style: var.$d-none;
+                    margin: 16px 0px 0px;
+
+                    li {
+                        font-weight: var.$font-medium;
+                        font-size: 18px;
+                        line-height: 24px;
+                        padding-left: 32px;
+                        position: var.$relative;
+
+                        span {
+                            cursor: var.$cursor-pointer;
+                            color: color.$blue;
+                            font-weight: var.$font-semibold;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: var.$absolute;
+                            background-image: url('../../../images/icons/icon-pricing-circle-check.png');
+                            background-repeat: var.$no-repeat;
+                            background-size: var.$contain;
+                            height: 20px;
+                            width: 20px;
+                            left: 0px;
+                            top: var.$half;
+                            transform: translate(0, -(var.$half));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

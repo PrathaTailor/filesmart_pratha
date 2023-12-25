@@ -1,0 +1,104 @@
+// Font Family
+$font-openSans: 'Open Sans';
+$font-mulish: 'Mulish';
+$font-metropolis: 'Metropolis';
+$font-rota: 'Rota';
+
+// Font Weight
+$font-thin: 100;
+$font-extralight: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+$font-black: 900;
+
+//Heading
+$title-xxl: 60px;
+$title-xl: 40px;
+$title-lg: 36px;
+$text-reg: 26px;
+$text-reg-lg: 30px;
+$leading-xxl: 65px;
+$leading-xl: 40px;
+$leading-lg: 30px;
+
+//General Variables
+$auto: auto;
+$absolute: absolute;
+$block: block;
+$center: center;
+$contain: contain;
+$d-none: none;
+$flex: flex;
+$flex-around: space-around;
+$flex-between: space-between;
+$flex-col: column;
+$flex-col-reverse: column-reverse;
+$wrap: wrap;
+$start: flex-start;
+$end: flex-end;
+$inline-flex: inline-flex;
+$inline-block: inline-block;
+$inline: inline;
+$relative: relative;
+$no-repeat: no-repeat;
+$verticle: vertical;
+$hidden: hidden;
+$text-ellipsis: ellipsis;
+$uppercase: uppercase;
+$cursor-pointer: pointer;
+$underline: underline;
+$object-cover: cover;
+$right: right;
+$italic: italic;
+$left: left;
+$fixed: fixed;
+$cover: cover;
+$top: top;
+$not-italic: normal;
+$max-w-max: max-content;
+$min-w-max: min-content;
+$cursor-pointer: pointer;
+$flex-row-reverse: row-reverse;
+$f-normal: normal;
+
+//Border Attributes
+$border: 1px;
+$border-2: 2px;
+$border-4: 4px;
+$border-none: none;
+$decoration-solid: solid;
+
+// Button
+$lg-button: 365px;
+$sm-button: 300px;
+$quiz-button: 220px;
+$dimension-button: 311px;
+
+// Units
+$w-3-12: 25%;
+$w1-3: 33.33%;
+$w2-5: 40%;
+$half: 50%;
+$w3-5: 60%;
+$w9-12: 75%;
+$full: 100%;
+$w-max: max-content;
+
+// Responsive Breakpoints
+$container: 1214.84px;
+$xxl-screen: 1920px;
+$xl-screen: 1600px;
+$lg-screen: 1445px;
+$reg-screen: 1366px;
+$laptop-screen: 1280px;
+$xl-tablet: 1024px;
+$l-tablet: 991px;
+$reg-tablet: 767px;
+$phablet: 600px;
+$mobile-l: 480px;
+$mobile-reg: 390px;
+$mobile-sm: 360px;

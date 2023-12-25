@@ -1,0 +1,370 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.container {
+    .titleWrapper {
+        max-width: 518px;
+        text-align: var.$center;
+        padding: 80px 0px 30px;
+        margin: 0px var.$auto;
+
+        @media screen and (max-width: var.$lg-screen) {
+            max-width: var.$full;
+            padding: 56px 60px 33px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            padding: 32px 0px 30px;
+        }
+
+        .title {
+            font-weight: var.$font-semibold;
+            font-size: 36px;
+            line-height: 52px;
+            margin-bottom: 8px;
+
+            @media screen and (max-width: var.$laptop-screen) {
+                font-size: 34px;
+                line-height: 44px;
+                margin-bottom: 15px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            span {
+                color: color.$blue;
+            }
+            sup {
+                font-size: 18px;
+            }
+        }
+
+        .subTitle {
+            font-size: 20px;
+            line-height: 26px;
+            font-family: var.$font-metropolis;
+            max-width: 600px;
+            margin: var.$auto;
+            font-weight: var.$font-light;
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 18px;
+                line-height: 24px;
+                width: var.$full;
+                max-width: 349px;
+            }
+
+            span {
+                color: color.$blue;
+                font-weight: var.$font-medium;
+            }
+            sup {
+                font-size: 10px;
+            }
+            i {
+                font-style: normal;
+                position: relative;
+                right: 6px;
+            }
+        }
+    }
+
+    .serviceWrapper {
+        background: color.$lavender;
+        padding: 79px 15px;
+        margin: 0px;
+
+        @media screen and (max-width: var.$lg-screen) {
+            padding: 40px 60px;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+            padding: 40px 30px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            padding: 16px 16px 24px;
+        }
+
+        .wrapper {
+            display: var.$flex;
+            overflow: var.$hidden;
+            flex-wrap: var.$wrap;
+            justify-content: var.$center;
+            margin: 0px var.$auto;
+            max-width: 1216px;
+            gap: 24px;
+
+            @media screen and (max-width: var.$mobile-l) {
+                margin: 0px;
+                gap: 13px;
+            }
+
+            .cardWrapper {
+                width: var.$full;
+                max-width: 389px;
+                margin-bottom: 0px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    width: var.$full;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    width: var.$full;
+                }
+
+                @media screen and (max-width: var.$mobile-l) {
+                    // padding: 10px 0px;
+                }
+
+                .card {
+                    background-color: color.$white;
+                    padding: 32px 0px 48px !important;
+                    height: 460px;
+                    position: var.$relative;
+                    border-radius: 10px;
+
+                    @media screen and (max-width: var.$lg-screen) {
+                        height: var.$full;
+                    }
+
+                    @media screen and (max-width: var.$laptop-screen) {
+                        padding: 30px;
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        height: var.$auto;
+                        padding: 30px !important;
+                    }
+
+                    .titleWrap {
+                        display: var.$flex;
+                        flex-direction: var.$flex-row-reverse;
+                        justify-content: var.$flex-between;
+                        align-items: var.$center;
+                        height: 70.56px;
+                        width: var.$full;
+                        max-width: 304.08px;
+                        margin: 0px var.$auto;
+
+                        @media screen and (max-width: var.$phablet) {
+                            height: 60px;
+                            width: var.$full;
+                            max-width: 305px;
+                        }
+
+                        .cardIcon {
+                            object-fit: var.$contain;
+                            margin: 0px !important;
+                            top: -6px !important;
+                            left: 6px !important;
+
+                            @media screen and (max-width: var.$laptop-screen) {
+                                width: 50px;
+                                top: 40px;
+                            }
+
+                            @media screen and (max-width: var.$mobile-l) {
+                                width: 54px !important;
+                                max-width: 54px !important;
+                                min-width: 54px !important;
+                                max-height: 54px !important;
+                                min-height: 54px !important;
+                                top: 15px !important;
+                                left: 15px !important;
+                            }
+                        }
+
+                        .cardTitle {
+                            font-weight: var.$font-semibold;
+                            font-size: 28px;
+                            line-height: 25px;
+                            color: color.$blue;
+                            max-width: var.$full;
+                            position: var.$relative;
+
+                            @media screen and (max-width: var.$mobile-l) {
+                                margin-bottom: 5px;
+                            }
+
+                            @media screen and (max-width: var.$phablet) {
+                                line-height: 30px;
+                            }
+                        }
+                    }
+
+                    .perfectFor {
+                        font-weight: var.$font-extrabold;
+                        font-size: 20px;
+                        line-height: 25px;
+                        color: color.$black-pearl;
+                        font-family: var.$font-metropolis;
+
+                        @media screen and (max-width: var.$lg-screen) {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+
+                        @media screen and (max-width: var.$mobile-l) {
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                    }
+
+                    .perfectForAns {
+                        font-weight: var.$font-medium;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: color.$black-pearl;
+                        padding-bottom: 29px;
+                        margin-bottom: 29px;
+                        border-bottom: var.$border var.$decoration-solid rgba(0, 0, 0, 0.24);
+
+                        @media screen and (max-width: var.$lg-screen) {
+                            font-size: 20px;
+                            line-height: 26px;
+                        }
+
+                        @media screen and (max-width: var.$mobile-l) {
+                            font-size: 18px;
+                            line-height: 32px;
+                            padding-bottom: 16px;
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                    .cardDesc {
+                        font-weight: var.$font-light;
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin: 16px var.$auto 24px;
+                        min-height: 88px;
+                        width: var.$full;
+                        max-width: 318px;
+                        font-family: var.$font-metropolis;
+
+                        sup {
+                            font-size: 8px;
+                        }
+                        @media screen and (max-width: var.$lg-screen) {
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
+
+                        @media screen and (max-width: var.$xl-tablet) {
+                            min-height: var.$auto;
+                        }
+
+                        @media screen and (max-width: var.$reg-tablet) {
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+
+                        @media screen and (max-width: var.$phablet) {
+                            margin: 22px auto 20px auto !important;
+                            padding-top: 0px;
+                            border-top: 0px;
+                            min-height: var.$auto;
+                            padding-bottom: 0px;
+                        }
+                    }
+
+                    .listWrapper {
+                        width: var.$full;
+                        max-width: 318px;
+                        margin: var.$auto;
+
+                        .listTitle {
+                            font-weight: var.$font-semibold;
+                            font-size: 20px;
+                            line-height: 25px;
+                            margin-bottom: 8px;
+
+                            @media screen and (max-width: var.$lg-screen) {
+                                font-size: 26px;
+                                line-height: 36px;
+                            }
+
+                            @media screen and (max-width: var.$xl-tablet) {
+                                line-height: 1.2;
+                            }
+
+                            @media screen and (max-width: var.$mobile-l) {
+                                font-size: 20px;
+                                line-height: 24px;
+                                margin-bottom: 12px;
+                            }
+                        }
+
+                        .list {
+                            margin: 0px;
+                            padding-left: 0px;
+                            list-style: var.$d-none;
+                            font-weight: var.$font-normal;
+
+                            li {
+                                padding-left: 24px;
+                                position: var.$relative;
+                                font-size: 16px;
+                                line-height: 22px;
+                                font-family: var.$font-metropolis;
+                                margin-bottom: 9px;
+                                font-weight: var.$font-light;
+
+                                @media screen and (max-width: var.$lg-screen) {
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    padding-left: 30px;
+                                }
+
+                                @media screen and (max-width: var.$laptop-screen) {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                }
+
+                                @media screen and (max-width: var.$mobile-l) {
+                                    padding-left: 24px;
+                                    margin-bottom: 8px;
+                                }
+
+                                &:before {
+                                    content: '';
+                                    position: var.$absolute;
+                                    background-image: url('../../images/icons/icon-blue-check.png');
+                                    width: 15px;
+                                    height: 11px;
+                                    background-size: var.$contain;
+                                    left: 2px;
+                                    top: 7px;
+                                    background-repeat: no-repeat;
+
+                                    @media screen and (max-width: var.$lg-screen) {
+                                        width: 20px;
+                                        height: 14.78px;
+                                        top: 6px;
+                                        background-repeat: var.$no-repeat;
+                                    }
+
+                                    @media screen and (max-width: var.$mobile-l) {
+                                        width: 16px;
+                                    }
+
+                                    @media screen and (max-width: var.$phablet) {
+                                        top: 2px;
+                                    }
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

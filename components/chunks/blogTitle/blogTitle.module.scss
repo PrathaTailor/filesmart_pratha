@@ -1,0 +1,21 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  padding: 16px 20px;
+  width: var.$full;
+  max-width: 718px;
+  margin: var.$auto;
+
+  h1 {
+    font-weight: var.$font-bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: color.$black-pearl;
+
+    @media screen and (max-width: var.$phablet) {
+      font-size: 28px;
+      line-height: 106.5%;
+    }
+  }
+}

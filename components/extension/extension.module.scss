@@ -1,0 +1,569 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.hero {
+  .container {
+    max-width: 1160px;
+    padding: 55px 20px;
+    margin: var.$auto;
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+
+    @media screen and (max-width:var.$xl-tablet) {
+      padding: 30px 20px;
+    }
+
+    @media screen and (max-width:var.$reg-tablet) {
+      flex-wrap: var.$wrap;
+      padding: 30px 16px;
+    }
+
+    @media screen and (max-width:var.$phablet) {
+      padding: 60px 16px 30px;
+    }
+
+    .content {
+      width: var.$full;
+      max-width: 600px;
+
+      @media screen and (max-width:var.$xl-tablet) {
+        max-width: var.$half;
+      }
+
+      @media screen and (max-width:var.$reg-tablet) {
+        max-width: var.$full;
+        text-align: var.$center;
+        margin-bottom: 45px;
+      }
+
+      .title {
+        font-weight: var.$font-semibold;
+        font-size: var.$title-xxl;
+        line-height: 60px;
+        margin-bottom: 25px;
+
+        @media screen and (max-width:var.$xl-tablet) {
+          font-size: 48px;
+          line-height: 48px;
+        }
+
+        @media screen and (max-width:var.$reg-tablet) {
+          font-size: 32px;
+          line-height: 40px;
+          margin-bottom: 15px;
+        }
+
+        span {
+          color: color.$blue;
+          border-bottom: var.$border-4 var.$decoration-solid color.$hawkes-blue;
+
+          @media screen and (max-width:var.$phablet) {
+            border: var.$d-none;
+          }
+        }
+      }
+
+      p {
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-light;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: color.$vulcan;
+        margin-bottom: 25px;
+
+        @media screen and (max-width:var.$xl-tablet) {
+          font-size: 18px;
+          line-height: 24px;
+          max-width: 500px;
+        }
+
+        @media screen and (max-width:var.$reg-tablet) {
+          margin: var.$auto;
+          font-size: 20px;
+          line-height: 26px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .btn {
+        width: var.$full;
+        max-width: 191px;
+        height: 48px;
+        background: color.$light-yellow;
+        box-shadow: 0px 4px 0px color.$yellow, 0px 8px 0px -4px color.$spring-green;
+        border-radius: 12px;
+        font-weight: var.$font-bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: color.$vulcan;
+        display: var.$inline-flex;
+        align-items: var.$center;
+        justify-content: var.$center;
+        border: var.$d-none;
+        transition: all ease .3s;
+        cursor: pointer;
+
+        @media screen and (max-width:var.$reg-tablet) {
+          line-height: 24px;
+        }
+
+        &:hover {
+          background: color.$tangerine-yellow;
+          transition: all ease .3s;
+        }
+
+        &:active {
+          background-color: color.$candlelight;
+          transition: all ease .3s;
+        }
+
+        &:disabled {
+          background: #D1D1D1;
+          box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+          color: color.$white;
+          transition: all ease .3s;
+        }
+      }
+    }
+  }
+}
+
+.socialProof {
+  padding: 55px 20px;
+
+  @media screen and (max-width:var.$xl-tablet) {
+    padding: 30px 20px;
+  }
+
+  @media screen and (max-width:var.$phablet) {
+    padding: 30px 16px;
+  }
+
+  .container {
+    width: var.$full;
+    max-width: 1120px;
+    margin: var.$auto;
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+    gap: 159px;
+    position: var.$relative;
+
+
+    &:before {
+      content: '';
+      position: var.$absolute;
+      background: url('../../images//assets//extension-social-proof-bg.png') no-repeat top center;
+      width: var.$full;
+      height: 139px;
+      background-position: var.$top var.$center;
+      top: 0px;
+
+
+      @media screen and (max-width:var.$phablet) {
+        height: 102.31px;
+        background-position: var.$center;
+        top: var.$half;
+        transform: translate(0, -(var.$half));
+      }
+    }
+
+    @media screen and (max-width:var.$laptop-screen) {
+      gap: 100px;
+      background-size: var.$contain;
+    }
+
+    @media screen and (max-width:var.$l-tablet) {
+      gap: 50px;
+    }
+
+    @media screen and (max-width:var.$reg-tablet) {
+      flex-wrap: var.$wrap;
+      gap: 40px 30px;
+      background-position: var.$center;
+    }
+
+    .logo {
+      width: var.$full;
+      max-width: 166px;
+      text-align: var.$center;
+      position: var.$relative;
+
+      @media screen and (max-width:var.$reg-tablet) {
+        max-width: 45%;
+      }
+
+      p {
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-medium;
+        font-size: 18px;
+        line-height: 26px;
+        color: color.$vulcan;
+        margin-top: 34px;
+
+        @media screen and (max-width:var.$xl-tablet) {
+          margin-top: 21px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+.explanation {
+  .container {
+    width: var.$full;
+    max-width: 1160px;
+    padding: 55px 20px 25px;
+    margin: var.$auto;
+    text-align: var.$center;
+
+    @media screen and (max-width:var.$xl-tablet) {
+      padding: 30px 20px;
+    }
+
+    .title {
+      font-weight: var.$font-semibold;
+      font-size: 36px;
+      line-height: 46px;
+      color: color.$black-pearl;
+
+      @media screen and (max-width:var.$xl-tablet) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @media screen and (max-width:var.$phablet) {
+        font-size: 28px;
+        line-height: 35px;
+      }
+
+      span {
+        color: color.$blue;
+      }
+    }
+
+    p {
+      font-family: var.$font-metropolis;
+      font-weight: var.$font-normal;
+      font-size: 20px;
+      line-height: 32px;
+      color: color.$cod-gray;
+      margin-top: 8px;
+
+      @media screen and (max-width:var.$xl-tablet) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @media screen and (max-width:var.$phablet) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.phases {
+  .container {
+    width: var.$full;
+    max-width: 1160px;
+    margin: var.$auto;
+    padding: 25px 20px 55px;
+    text-align: var.$center;
+
+    @media screen and (max-width:var.$xl-tablet) {
+      padding: 30px 20px;
+    }
+
+    @media screen and (max-width:var.$phablet) {
+      padding: 30px 16px;
+    }
+
+    .title {
+      color: color.$blue;
+      font-weight: var.$font-semibold;
+      font-size: 28px;
+      line-height: 25px;
+
+      @media screen and (max-width:var.$l-tablet) {
+        line-height: 35px;
+      }
+    }
+
+    .blocks {
+      padding: 35px 0px;
+      display: var.$flex;
+      justify-content: var.$center;
+      gap: 25px;
+
+      @media screen and (max-width:var.$reg-tablet) {
+        flex-wrap: var.$wrap;
+        gap: 30px;
+      }
+
+      .block {
+        @media screen and (max-width:var.$reg-tablet) {
+          width: var.$full;
+        }
+
+        p {
+          font-family: var.$font-mulish;
+          font-weight: var.$font-bold;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.3px;
+          color: color.$black-pearl;
+          margin-top: 15px;
+        }
+      }
+
+    }
+
+    .btn {
+      width: var.$full;
+      max-width: 153px;
+      height: 50px;
+      background: color.$light-yellow;
+      box-shadow: 0px 4px 0px color.$yellow, 0px 8px 0px -4px color.$spring-green;
+      border-radius: 12px;
+      font-weight: var.$font-bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: color.$vulcan;
+      border: var.$d-none;
+      transition: all ease .3s;
+      cursor: pointer;
+
+      &:hover {
+        background: color.$tangerine-yellow;
+        transition: all ease .3s;
+      }
+
+      &:active {
+        background-color: color.$candlelight;
+        transition: all ease .3s;
+      }
+
+      &:disabled {
+        background: #D1D1D1;
+        box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+        color: color.$white;
+        transition: all ease .3s;
+      }
+    }
+  }
+}
+
+.benefits {
+  .container {
+    width: var.$full;
+    max-width: 1160px;
+    margin: var.$auto;
+    padding: 55px 20px 55px;
+    display: var.$flex;
+    justify-content: var.$center;
+    gap: 80px;
+
+    @media screen and (max-width:var.$xl-tablet) {
+      padding: 30px 20px;
+      gap: 50px;
+    }
+
+    @media screen and (max-width:var.$reg-tablet) {
+      flex-wrap: var.$wrap;
+      padding: 60px 16px 30px;
+    }
+
+    @media screen and (max-width:var.$phablet) {
+      gap: 30px;
+    }
+
+    .block {
+      width: var.$full;
+      max-width: 472px;
+      text-align: var.$center;
+      position: var.$relative;
+
+      @media screen and (max-width:var.$reg-tablet) {
+        max-width: var.$full;
+      }
+
+      span {
+        @media screen and (max-width:var.$phablet) {
+          max-width: 136px !important;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: var.$absolute;
+        background-image: url('../../images/assets/extension-social-proof-bg.png');
+        height: 138px;
+        width: 95%;
+        left: 0px;
+        right: 0px;
+        margin: var.$auto;
+        top: 49px;
+
+        @media screen and (max-width:var.$phablet) {
+          height: 112.91px;
+          background-size: var.$cover;
+          background-repeat: no-repeat;
+          width: var.$full;
+        }
+      }
+
+      .desc {
+        padding-top: 45px;
+
+        @media screen and (max-width:var.$phablet) {
+          padding-top: 30px;
+        }
+
+        .title {
+          font-family: var.$font-metropolis;
+          font-weight: var.$font-medium;
+          font-size: 20px;
+          line-height: 25px;
+          color: color.$vulcan;
+
+          @media screen and (max-width:var.$phablet) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 10px;
+          }
+        }
+
+        p {
+          font-family: var.$font-metropolis;
+          font-size: 16px;
+          line-height: 25px;
+          color: color.$vulcan;
+
+          @media screen and (max-width:var.$phablet) {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  padding: 55px 20px 125px;
+
+  @media screen and (max-width:var.$xl-tablet) {
+    padding: 30px 20px;
+  }
+
+  @media screen and (max-width:var.$phablet) {
+    padding: 15px 16px 60px;
+  }
+
+  .container {
+    width: var.$full;
+    max-width: 1054px;
+    background: #F5F0FF;
+    padding: 40px;
+    margin: var.$auto;
+
+    @media screen and (max-width:var.$phablet) {
+      padding: 15px 16px;
+    }
+
+    p {
+      font-family: var.$font-metropolis;
+      font-weight: var.$font-medium;
+      font-size: 20px;
+      line-height: 25px;
+      color: color.$black-pearl;
+      text-align: var.$center;
+
+      @media screen and (max-width:var.$phablet) {
+        font-size: 28px;
+        line-height: 35px;
+      }
+    }
+
+    .blocks {
+      width: var.$full;
+      max-width: 913px;
+      margin: 40px var.$auto 0px;
+      display: var.$flex;
+      justify-content: var.$center;
+      gap: 100px;
+
+      @media screen and (max-width:var.$laptop-screen) {
+        gap: 50px;
+      }
+
+      @media screen and (max-width:var.$reg-tablet) {
+        gap: 30px;
+      }
+
+      @media screen and (max-width:var.$phablet) {
+        flex-wrap: var.$wrap;
+        margin-top: 30px;
+      }
+
+      .block {
+        width: var.$full;
+        max-width: 253px;
+        text-align: var.$center;
+
+        @media screen and (max-width:var.$phablet) {
+          max-width: 230px;
+        }
+
+        span {
+          @media screen and (max-width:var.$phablet) {
+            height: 16px !important;
+          }
+
+          img {
+            object-fit: var.$contain;
+          }
+        }
+
+        .content {
+          margin-top: 35px;
+
+          @media screen and (max-width:var.$xl-tablet) {
+            margin-top: 10px;
+          }
+
+          .quote {
+            font-style: var.$italic;
+            font-weight: var.$font-light;
+            font-size: 24px;
+            line-height: 36px;
+            color: color.$vulcan;
+            margin-bottom: 10px;
+
+            @media screen and (max-width:var.$xl-tablet) {
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+
+          .client {
+            font-family: var.$font-metropolis;
+            font-weight: var.$font-medium;
+            font-size: 20px;
+            line-height: 25px;
+            color: color.$black-pearl;
+
+            @media screen and (max-width:var.$xl-tablet) {
+              font-size: 16px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

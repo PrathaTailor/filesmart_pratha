@@ -1,0 +1,130 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  width: var.$full;
+  max-width: 678px;
+  margin: var.$auto;
+  position: var.$relative;
+  cursor: var.$cursor-pointer;
+
+  .banner {
+    display: flex;
+    @media screen and (max-width:var.$phablet) {
+      height: auto;
+    }
+
+    img {
+      width: var.$full;
+      height: var.$full;
+      object-fit: var.$cover;
+    }
+  }
+
+  .box {
+    padding: 10px 32px;
+    width: var.$full;
+    max-width: 284px;
+    height: var.$full;
+    position: var.$absolute;
+    top: 0;
+    right: 0;
+    background: rgba(15, 30, 255, 0.8);
+    display: var.$flex;
+    flex-direction: var.$flex-col;
+    justify-content: var.$center;
+
+    @media screen and (max-width:var.$phablet) {
+      top: var.$auto;
+      bottom: 0;
+      height: var.$auto;
+      max-width: var.$full;
+      padding: 10px 17px;
+      align-items: var.$center;
+      position: relative;
+    }
+
+    .lgText {
+      font-weight: var.$font-semibold;
+      font-size: 24px;
+      line-height: 105.5%;
+      color: color.$white;
+      width: var.$full;
+      margin-bottom: 10px;
+
+      @media screen and (max-width:var.$phablet) {
+        font-size: 16px;
+        line-height: 105.5%;
+        text-align: var.$center;
+
+      }
+
+      @media screen and (max-width:var.$mobile-reg) {
+        max-width: 260px;
+      }
+
+      span {
+        color: #EBC328;
+      }
+    }
+
+    .btn {
+      background: #EBC328;
+      box-shadow: 0px 4px 0px #C9A31F, 0px 8px 0px -4px rgba(255, 184, 0, 0.19);
+      padding: 12px 15px;
+      min-height: 37px;
+      border: var.$d-none;
+      font-weight: var.$font-bold;
+      font-size: 13px;
+      line-height: 12px;
+      color: color.$violet;
+      display: var.$flex;
+      align-items: var.$center;
+      max-width: var.$full;
+      justify-content: var.$center;
+      border-radius: 12px;
+
+      @media screen and (max-width:var.$phablet) {
+        max-width: 232px;
+        padding: 10px 24px;
+      }
+
+      .btnText {
+        text-align: var.$left;
+
+        span {
+          display: var.$block;
+        }
+
+        .lg {
+          font-family: 'Rota';
+          font-style: normal;
+          font-weight: 00;
+          font-size: 14px;
+          line-height: 12px;
+          color: #0F1E32;
+          margin-bottom: 4px;
+        }
+
+        .sm {
+          font-size: 10px;
+          line-height: 12px;
+          font-family: 'Rota';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 12px;
+          color: #0F1E32;
+        }
+      }
+
+      .icon {
+        display: var.$inline-block;
+        margin-left: 4px;
+        max-width: 13px;
+        max-height: 13px;
+        object-fit: var.$contain;
+      }
+    }
+  }
+}

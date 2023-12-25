@@ -1,0 +1,14 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.imgWrapper {
+  margin: var.$auto;
+  max-width: 678px;
+  max-height: 279px;
+
+  img {
+    width: var.$full;
+    height: var.$full;
+    object-fit: var.$contain;
+  }
+}

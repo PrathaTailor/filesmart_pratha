@@ -1,0 +1,266 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.paraWrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: var.$xl-screen) {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+
+  @media screen and (max-width: var.$reg-tablet) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    margin: 0px var.$auto 0px;
+    padding: 58.23px 0px;
+    width: 1216px;
+    height: 387.29px;
+    max-width: 1480px;
+    background-color: color.$lavender;
+
+    @media screen and (max-width: var.$xl-screen) {
+      max-width: var.$full;
+      padding-left: 32px;
+      height: var.$full;
+      padding-right: 32px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+      padding-left: 32px;
+      padding-right: 32px;
+      height: var.$full;
+
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+      padding: 40px 16px;
+      height: var.$full;
+
+    }
+
+    .innerContainer {
+      width: 100%;
+      max-width: 834px;
+      margin: 0px var.$auto ;
+      padding: 0px 0px 0px 0px;
+
+      .descWrapper {
+        display: var.$flex;
+        justify-content: var.$left;
+        align-items: var.$center;
+        gap: 10px;
+        margin-bottom: 36.64px;
+        // padding-left: 14px;
+
+        @media screen and (max-width: var.$reg-tablet) {
+          flex-wrap: var.$wrap;
+          margin-bottom: 15px;
+          gap: 30px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+          flex-wrap: var.$wrap;
+          margin-bottom: 19px;
+          gap: 30px;
+          margin-top: 18px;
+
+          span {
+            width: 44px !important;
+            height: 46px !important;
+          }
+        }
+
+        .logo {
+          @media screen and (max-width: var.$mobile-l) {
+            width: 44px !important;
+            height: 46px !important;
+          }
+        }
+
+        .content {
+          // padding-left: 100px;
+
+          @media screen and (max-width: var.$lg-screen) {
+            // padding-left: 60px;
+          }
+
+          @media screen and (max-width: var.$l-tablet) {
+            // padding-left: 30px;
+          }
+
+          @media screen and (max-width: var.$reg-tablet) {
+            padding-left: 0px;
+            // margin-top: 30px;
+          }
+
+          .title {
+            font-weight: var.$font-semibold;
+            font-size: 32px;
+            line-height: var.$leading-xl;
+
+
+            @media screen and (max-width: var.$xl-screen) {
+              font-size: 30px;
+              line-height: var.$leading-xl;
+            }
+
+            @media screen and (max-width: var.$lg-screen) {
+              font-size: 30px;
+              line-height: var.$leading-lg;
+            }
+
+            @media screen and (max-width: var.$xl-tablet) {
+              font-size: 30px;
+              line-height: var.$leading-lg;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+              font-size: 30px;
+              line-height: var.$leading-lg;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+              font-size: 28px;
+              line-height: 35px;
+            }
+          }
+        }
+
+      }
+
+      .subtitle {
+        font-size: 18px;
+        line-height: 26px;
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-light;
+
+        @media screen and (max-width: var.$mobile-reg) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+          line-height: 30px;
+        }
+
+      }
+    }
+
+    .benefits {
+      display: var.$flex;
+      align-items: var.$center;
+      gap: 88px;
+      margin: 27px var.$auto 0px var.$auto ;
+      width: var.$full;
+      max-width: 844px;
+
+      @media screen and (max-width: var.$xl-screen) {
+        max-width: var.$full;
+      }
+
+      @media screen and (max-width: var.$xl-tablet) {
+        flex-wrap: var.$wrap;
+        margin-top: 20px;
+        padding: 0px;
+        gap: 0px;
+
+      }
+
+      @media screen and (max-width: var.$phablet) {
+        flex-wrap: var.$wrap;
+        margin-top: 20px;
+        padding: 0px;
+      }
+
+      @media screen and (max-width: var.$mobile-l) {
+        margin-top: 12px;
+        padding: 0px;
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: space-between;
+        margin-bottom: 9px;
+      }
+
+      .benefit {
+
+        @media screen and (max-width: var.$xl-tablet) {
+          width: var.$full;
+          max-width: var.$half;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+          padding: 20px 0px 0px;
+
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+          padding: 0px 0px 0px;
+          width: 100%;
+          max-width: 45%;
+          text-align: center;
+        }
+
+        img {
+          margin: var.$auto;
+          object-fit: var.$contain;
+
+          @media screen and (max-width: var.$laptop-screen) {
+            width: var.$w9-12;
+          }
+
+          @media screen and (max-width: var.$mobile-l) {
+            width: 175px;
+            height: var.$auto;
+          }
+        }
+
+      }
+
+      .benefit:nth-child(1) {
+        position: relative;
+        left: -4px;
+
+        @media screen and (max-width: var.$phablet) {
+          max-width: 45%;
+        }
+      }
+
+      .benefit:nth-child(2) {
+        position: relative;
+        left: -2px;
+
+        @media screen and (max-width: var.$phablet) {
+          max-width: 41%;
+        }
+      }
+
+      .benefit:nth-child(3) {
+        position: relative;
+        left: 1px;
+
+        @media screen and (max-width: var.$phablet) {
+          max-width: 41%;
+          position: relative;
+          bottom: 4px;
+        }
+      }
+
+      .benefit:nth-child(4) {
+        position: relative;
+        left: 4px;
+
+        @media screen and (max-width: var.$phablet) {
+          max-width: 40%;
+          position: relative;
+          bottom: 2px;
+          left: -3px;
+        }
+      }
+    }
+  }
+}

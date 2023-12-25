@@ -1,0 +1,57 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    width: var.$full;
+    max-width: 1560px;
+    padding: 50px 20px 75px;
+    margin: var.$auto;
+    display: var.$flex;
+    gap: 142px;
+    justify-content: var.$center;
+
+    @media screen and (max-width: var.$xl-screen) {
+        gap: 5%;
+    }
+
+    @media screen and (max-width: var.$xl-tablet) {
+        flex-wrap: var.$wrap;
+        padding: 25px 20px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        padding: 0px 16px 40px;
+    }
+
+    .half {
+        width: var.$full;
+        max-width: 680px;
+        text-align: var.$center;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            padding: 25px 0px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            padding: 30px 0px;
+        }
+
+        p {
+            font-family: var.$font-metropolis;
+            font-weight: var.$font-light;
+            font-size: 24px;
+            line-height: 35px;
+            text-align: var.$center;
+            letter-spacing: 0.02em;
+            margin-top: 38px;
+            @media screen and (max-width: var.$phablet) {
+                margin-top: 28px;
+                font-size: 16px;
+                line-height: 23px;
+            }
+        }
+        sup {
+            font-size: 12px;
+        }
+    }
+}

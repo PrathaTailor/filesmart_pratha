@@ -1,0 +1,278 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  width: var.$full;
+  max-width: 940.18px;
+  margin: var.$auto;
+
+  .wrapper {
+    padding: 0px 24px;
+  }
+
+  .advHero {
+    .pagination {
+      text-align: var.$center;
+      padding-top: 104px;
+      padding-bottom: 16px;
+      color: color.$black-pearl;
+      font-size: 15px;
+      line-height: 15px;
+
+      @media screen and (max-width: var.$reg-tablet) {
+        font-size: 14px;
+        line-height: 19px;
+        padding-top: 20px;
+      }
+
+      a {
+        color: color.$steel-gray
+      }
+    }
+
+    .advTitle {
+      font-weight: var.$font-bold;
+      font-size: 36px;
+      line-height: 40px;
+      color: color.$blue;
+      text-align: var.$center;
+      margin-bottom: 17px;
+
+      @media screen and (max-width: var.$reg-tablet) {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .advTitleMain {
+      font-weight: var.$font-bold;
+      font-size: 50px;
+      line-height: 60px;
+      text-align: var.$center;
+      color: color.$base-black;
+      max-width: 752px;
+      margin: var.$auto;
+      margin-bottom: 17px;
+
+      @media screen and (max-width: var.$reg-tablet) {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .advDesc {
+      font-weight: var.$font-normal;
+      font-size: 21px;
+      line-height: 140%;
+      text-align: var.$center;
+      color: color.$cod-gray;
+      max-width: 674px;
+      margin: var.$auto;
+
+      @media screen and (max-width: var.$reg-tablet) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .advWrapper {
+    .authorDetails {
+      width: var.$full;
+      max-width: 840px;
+      margin: var.$auto;
+      display: var.$flex;
+      align-items: var.$center;
+      justify-content: var.$flex-between;
+      padding: 28px 0px;
+
+      @media screen and (max-width:var.$reg-tablet) {
+        padding: 20px 0px;
+      }
+
+      @media screen and (max-width:var.$mobile-reg) {
+        justify-content: var.$center;
+      }
+
+      .authName {
+        display: var.$inline-flex;
+        align-items: var.$center;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media screen and (max-width: var.$reg-tablet) {
+          font-size: 14px;
+          line-height: 19px;
+        }
+
+        @media screen and (max-width: 380px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        .authAvatar {
+          display: var.$inline-block;
+          margin-right: 10px;
+          width: 28px;
+          height: 28px;
+          object-fit: var.$contain;
+          border-radius: var.$half;
+
+          @media screen and (max-width:var.$reg-tablet) {
+            width: 23.64px;
+            height: 23.64px;
+            margin-right: 8.44px;
+          }
+
+          @media screen and (max-width: 380px) {
+            margin-right: 3px;
+          }
+
+        }
+      }
+
+      .articleTimeDate {
+        display: var.$flex;
+        align-items: var.$center;
+
+        .date,
+        .time {
+          display: var.$flex;
+          align-items: var.$center;
+          font-size: 16px;
+          line-height: 20px;
+          color: color.$charcoal;
+
+          @media screen and (max-width:var.$reg-tablet) {
+            font-size: 14px;
+            line-height: 19px;
+          }
+
+          @media screen and (max-width: 380px) {
+            font-size: 12px;
+            line-height: 16px;
+          }
+
+          .iconText{
+            display: inline-block;
+            padding-left: 4px;
+          }
+
+          img {
+            display: var.$inline-block;
+            margin-right: 9px;
+
+            @media screen and (max-width:var.$reg-tablet) {
+              margin-right: 8.44px;
+              width: 20px;
+            }
+
+            @media screen and (max-width: 380px) {
+              margin-right: 3px;
+            }
+          }
+        }
+
+        .time {
+          margin-left: 16px;
+
+          @media screen and (max-width: 380px) {
+            margin-left: 6px;
+          }
+        }
+
+        .date {
+          @media screen and (max-width: var.$mobile-reg) {
+            margin-left: 16px;
+          }
+
+          @media screen and (max-width: 380px) {
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+
+    .articleBanner {
+      img {
+        width: var.$full;
+        max-height: 346px;
+        object-fit: var.$cover;
+      }
+    }
+
+    .taxFilingWrapper {
+      max-width: 678px;
+      margin: var.$auto;
+      display: var.$flex;
+      align-items: var.$center;
+      padding: 34px 0px;
+
+      .taxDeadline {
+        display: var.$flex;
+        align-items: var.$center;
+
+        .iconTaxFiling {
+          width: 64px;
+        }
+
+        .taxFilingDesc {
+          font-size: 28px;
+          line-height: 105.5%;
+          font-weight: var.$font-bold;
+          color: color.$vulcan;
+          margin-left: 16px;
+          max-width: 303px;
+
+          span {
+            color: color.$violet;
+          }
+        }
+      }
+
+      .taxFilingInteraction {
+        .btn {
+          padding: 12px 20px;
+          background: color.$violet;
+          font-weight: var.$font-black;
+          font-size: 18px;
+          line-height: 18px;
+          width: var.$full;
+          max-width: 261px;
+          border: var.$d-none;
+          display: var.$flex;
+          align-items: var.$center;
+          cursor: var.$cursor-pointer;
+
+          .btnText {
+            text-align: var.$left;
+            display: var.$inline-block;
+            margin-right: 16px;
+
+            .lg {
+              display: var.$block;
+              color: color.$white;
+
+              label {
+                display: var.$block;
+                color: color.$light-yellow;
+              }
+            }
+
+            .sm {
+              display: var.$block;
+              font-weight: var.$font-medium;
+              font-size: 14px;
+              line-height: 19px;
+              color: color.$white;
+              margin-top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

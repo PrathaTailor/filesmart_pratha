@@ -1,0 +1,25 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  width: var.$full;
+  padding: 0px 20px 12px;
+  max-width: 718px;
+  margin: 0px var.$auto 16px;
+
+  p {
+    font-weight: var.$font-normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    font-family: 'Metropolis';
+
+    br {
+      display: none;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+}

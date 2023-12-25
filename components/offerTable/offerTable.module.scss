@@ -1,0 +1,850 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.offerTable {
+    margin-top: 78px;
+    margin-bottom: 79px;
+
+    @media screen and (max-width: var.$xl-screen) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        margin-bottom: 55px;
+        margin-top: 58px;
+    }
+
+    .container {
+        width: 100%;
+        margin: var.$auto;
+
+        @media screen and (max-width: var.$xl-screen) {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @media screen and (max-width: var.$xl-tablet) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .tableDesc {
+            text-align: var.$center;
+            width: var.$full;
+            max-width: 1030px;
+            margin: 6px var.$auto 0px;
+
+            @media screen and (max-width: var.$phablet) {
+                margin: 0px var.$auto;
+            }
+
+            .title {
+                font-weight: var.$font-semibold;
+                font-size: 36px;
+                line-height: 46px;
+                margin-bottom: 8px;
+                font-family: var.$font-rota;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    font-size: 28px;
+                    line-height: 34.72px;
+                    margin-bottom: 15px;
+                    font-family: var.$font-rota;
+                }
+                sup {
+                    font-size: 18px;
+                }
+                p {
+                    font-weight: var.$font-bold;
+                    font-size: 36px;
+                    line-height: 46px;
+                    margin-bottom: 8px;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        font-size: 34px;
+                        line-height: 44px;
+                    }
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 28px;
+                        line-height: 35px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 24px;
+                font-weight: var.$font-normal;
+                color: color.$black-pearl;
+                font-family: var.$font-metropolis;
+                font-weight: var.$font-light;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-family: var.$font-rota;
+                }
+            }
+        }
+
+        .offerTableWrap {
+            display: var.$flex;
+            justify-content: var.$center;
+            max-width: 1103px;
+            margin: 53px auto 0px auto;
+            align-items: var.$end;
+
+            @media screen and (max-width: var.$phablet) {
+                flex-wrap: var.$wrap;
+                margin-top: 30px;
+            }
+
+            .offerTitleTable {
+                width: 459px;
+                list-style: none;
+                padding-left: 0px;
+                margin-right: -60px;
+                margin-top: 0px;
+                position: relative;
+                top: 4px;
+                border-radius: 24.8647px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    display: var.$d-none;
+                }
+
+                .item {
+                    height: 117px;
+                    border: 2px var.$decoration-solid rgba(10, 10, 20, 0.2);
+                    border-bottom: 0px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    padding: 21px 49px 20px 49px;
+                    font-family: var.$font-metropolis;
+                    font-weight: var.$font-medium;
+                    font-size: 20px;
+                    line-height: 27px;
+                    background: color.$lavender;
+
+                    &:first-child {
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 40px;
+                        padding-top: 35px;
+                    }
+
+                    &:last-child {
+                        border-bottom: 2px var.$decoration-solid rgba(10, 10, 20, 0.2);
+                        border-bottom-left-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        padding-bottom: 26px;
+                    }
+                }
+            }
+
+            .offerFreeTable {
+                width: 430px;
+                list-style: none;
+                padding-left: 0px;
+                border-radius: 40px;
+                position: relative;
+                z-index: 9;
+                margin-top: 0px;
+                top: 4px;
+                box-shadow: 9.87539px 0px 39.5015px rgba(15, 30, 255, 0.2);
+
+                @media screen and (max-width: var.$phablet) {
+                    margin: 0px;
+                    width: var.$full;
+                    top: 0px;
+                }
+
+                .item {
+                    height: 117px;
+                    border: 2px solid #0f1eff;
+                    border-top: 2px solid rgba(15, 30, 255, 0.2);
+                    border-bottom: 0;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    padding: 15px;
+                    font-family: var.$font-metropolis;
+                    font-weight: var.$font-medium;
+                    font-size: 20px;
+                    line-height: 27px;
+                    background: color.$white;
+                    text-align: var.$center;
+                    justify-content: var.$center;
+                    flex-direction: var.$flex-col;
+                    position: var.$relative;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        height: 165px;
+                        padding-top: 50px;
+                        position: relative;
+                    }
+
+                    .resLabel {
+                        display: var.$d-none;
+
+                        @media screen and (max-width: var.$xl-tablet) {
+                            display: block;
+                            border-top: 2px solid rgba(0, 0, 0, 0.2);
+                            font-size: 18px;
+                            line-height: 18px;
+                            position: absolute;
+                            padding: 10px;
+                            top: -3px;
+                            background: #e6e6ff;
+                            width: 100%;
+                        }
+                    }
+
+                    .discountWrap {
+                        margin-bottom: 4px;
+
+                        @media screen and (max-width: var.$lg-screen) {
+                            margin-bottom: 3px;
+                        }
+
+                        .discText {
+                            font-weight: var.$font-medium;
+                            font-size: 14.9px;
+                            line-height: 15px;
+                            color: color.$forest-green;
+                            letter-spacing: 0.1em;
+                            padding: 12.4324px 18.6485px;
+                            background: color.$bright-gray;
+                            border-radius: 6.21618px;
+                            height: 22.38px;
+                            display: var.$inline-flex;
+                            justify-content: var.$center;
+                            align-items: var.$center;
+                            margin-bottom: 4.6px;
+                            min-width: 151px;
+                            text-transform: var.$uppercase;
+
+                            @media screen and (max-width: var.$phablet) {
+                                color: #005C36;
+                            }
+
+                        }
+
+                        .acctual {
+                            font-family: var.$font-metropolis;
+                            font-style: var.$not-italic;
+                            font-weight: var.$font-bold;
+                            font-size: 26.55px;
+                            line-height: 35px;
+                            color: color.$mountain-meadow;
+
+                            @media screen and (max-width: var.$laptop-screen) {
+                                font-size: 24px;
+                                line-height: var.$leading-lg;
+                            }
+
+                            .price {
+                                color: color.$dim-gray;
+                                display: var.$inline-block;
+                                margin-right: 8px;
+                                font-weight: var.$font-medium;
+                                position: var.$relative;
+
+                                &::before {
+                                    content: '';
+                                    position: var.$absolute;
+                                    width: var.$full;
+                                    height: 1px;
+                                    background-color: color.$dim-gray;
+                                    transform: translate(0px, -(var.$half));
+                                    top: var.$half;
+                                }
+                            }
+                        }
+
+                        .discount {
+                            font-weight: var.$font-medium;
+                            font-size: 28px;
+                            line-height: 35px;
+                            color: color.$blue;
+                        }
+
+                        & + .text {
+                            margin-top: 0px;
+                        }
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 25px;
+                        border: 2px solid #0f1eff;
+                        border-bottom: 0;
+                        padding-bottom: 0px;
+                        justify-content: flex-start;
+
+                        @media screen and (max-width: var.$phablet) {
+                            height: 191px;
+                            border-top-left-radius: 40px;
+                            border-top-right-radius: 40px;
+                            padding-top: 22px;
+                        }
+
+                        .text {
+                            @media screen and (max-width: var.$phablet) {
+                                margin-top: 24px;
+                            }
+
+                            @media screen and (max-width: var.$mobile-sm) {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: 3px var.$decoration-solid color.$blue;
+                        border-bottom-left-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        padding-top: 0px;
+
+                        @media screen and (max-width: var.$xl-tablet) {
+                            border-bottom-left-radius: 40px;
+                            border-bottom-right-radius: 40px;
+
+                            .title {
+                                top: 32px;
+                            }
+
+                            .text {
+                                position: relative;
+                                top: 31px;
+                            }
+                        }
+                    }
+
+                    .title {
+                        color: color.$blue;
+                        font-weight: var.$font-bold;
+                        font-size: 28px;
+                        line-height: 36px;
+                        text-transform: var.$uppercase;
+                        font-family: var.$font-metropolis;
+                        position: relative;
+                        top: 9px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: 31px;
+                            top: -2px;
+                        }
+                    }
+
+                    .logo,
+                    img {
+                        height: 58px;
+                        width: 58px;
+                        object-fit: var.$contain;
+
+                        @media screen and (max-width: var.$phablet) {
+                            width: 89px !important;
+                            max-width: 89px !important;
+                            height: 89px !important;
+                            max-height: 89px !important;
+                        }
+                    }
+
+                    .text {
+                        display: var.$block;
+                        margin-top: 14px;
+                        font-weight: var.$font-light;
+
+                        @media screen and (max-width: var.$lg-screen) {
+                            margin-top: 12px;
+                        }
+
+                        @media screen and (max-width: var.$laptop-screen) {
+                            margin-top: 8px;
+                        }
+
+                        @media screen and (max-width: var.$phablet) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+
+            .offerFreeTable {
+                li:nth-child(2) {
+                    .discText {
+                        position: relative;
+                        top: 1px;
+                        left: -3px;
+                    }
+
+                    .discount {
+                        position: relative;
+                        top: -1px;
+                        left: -3px;
+                    }
+
+                    .text {
+                        position: relative;
+                        top: 1px;
+                        left: -3px;
+                    }
+                }
+
+                li:nth-child(3) {
+                    .title {
+                        position: relative;
+                        left: 1px;
+                    }
+                }
+
+                li:nth-child(4) {
+                    .title {
+                        position: relative;
+                        top: 10px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: 31px;
+                            top: 2px;
+                        }
+                    }
+
+                    .text {
+                        position: relative;
+                        top: 1px;
+                        left: 2px;
+                    }
+                }
+
+                li:nth-child(5) {
+                    .title {
+                        position: relative;
+                        left: 0px;
+                    }
+
+                    .text {
+                        position: relative;
+                        top: -3px;
+                        left: 2px;
+                    }
+                }
+
+                li:nth-child(6) {
+                    .title {
+                        position: relative;
+                        left: 1px;
+                        top: 9px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: 31px;
+                            top: -6px;
+                        }
+                    }
+
+                    .text {
+                        position: relative;
+                        left: 2px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            top: -7px;
+                        }
+                    }
+                }
+            }
+
+            .offerPremiumTable {
+                width: 397px;
+                list-style: none;
+                padding-left: 0px;
+                border-radius: 40px;
+                margin-left: -15px;
+                margin-top: 15px;
+
+                @media screen and (max-width: var.$phablet) {
+                    margin: 30px 0px 0px;
+                    width: var.$full;
+                }
+
+                .item {
+                    height: 117px;
+                    border: 2px var.$decoration-solid rgba(10, 10, 20, 0.2);
+                    border-bottom: 0px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    padding: 15px;
+                    font-family: var.$font-metropolis;
+                    font-weight: var.$font-medium;
+                    font-size: 20px;
+                    line-height: 27px;
+                    background: color.$white;
+                    text-align: var.$center;
+                    justify-content: var.$center;
+                    flex-direction: var.$flex-col;
+                    position: var.$relative;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        height: 165px;
+                        padding-top: 50px;
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 17px;
+                        border-top-right-radius: 26px;
+                        padding-top: 50px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            padding-top: 0px !important;
+                        }
+
+                        @media screen and (max-width: var.$xl-tablet) {
+                            padding-top: 15px;
+                            border-top-left-radius: 40px;
+                            border-top-right-radius: 40px;
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: 2px var.$decoration-solid rgba(10, 10, 20, 0.2);
+                        border-bottom-left-radius: 26px;
+                        border-bottom-right-radius: 26px;
+                    }
+
+                    .resLabel {
+                        display: var.$d-none;
+
+                        @media screen and (max-width: var.$xl-tablet) {
+                            display: var.$block;
+                            border-top: 2px var.$decoration-solid rgba(0, 0, 0, 0.2);
+                            font-size: 18px;
+                            line-height: 18px;
+                            position: var.$absolute;
+                            padding: 10px;
+                            top: -3px;
+                            background: color.$cosmos;
+                            width: var.$full;
+                        }
+                    }
+
+                    .title {
+                        color: color.$persian-rose;
+                        font-weight: var.$font-medium;
+                        font-size: 28px;
+                        line-height: 36px;
+                        font-family: var.$font-metropolis;
+                        position: relative;
+                        top: 3px;
+                        left: -3px;
+
+                        @media screen and (max-width: var.$laptop-screen) {
+                            font-size: 26px;
+                            line-height: 26px;
+                        }
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: var.$text-reg-lg;
+                            line-height: var.$leading-xl;
+                        }
+                    }
+
+                    .text {
+                        display: var.$block;
+                        margin-top: 4px;
+                        font-weight: var.$font-medium;
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: 20px;
+                            line-height: 28px;
+                            margin-top: 0px;
+                        }
+                    }
+
+                    .itemIcon {
+                        height: 43px;
+                        width: 43px;
+                        margin-bottom: 12px;
+                        object-fit: var.$contain;
+
+                        @media screen and (max-width: var.$laptop-screen) {
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
+
+                .item:nth-last-child(1) {
+                    span {
+                        left: -1px;
+                        bottom: 5px;
+                    }
+
+                    img {
+                        max-width: 39.78px !important;
+                        max-height: 41.03px !important;
+                    }
+                }
+
+                .item:nth-last-child(2) {
+                    span {
+                        left: -10px;
+                    }
+
+                    img {
+                        max-width: 29.84px !important;
+                        max-height: 43.51px !important;
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        span {
+                            left: -1px;
+                            top: -8px;
+                        }
+
+                        img {
+                            max-width: 62.84px !important;
+                            max-height: 62.51px !important;
+                        }
+                    }
+                }
+            }
+
+            .offerPremiumTable {
+                li:nth-child(1) {
+                    .text {
+                        position: relative;
+                        top: 3px;
+                        left: -7px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            top: 11px;
+                            left: -1px;
+                        }
+                    }
+                }
+
+                li:nth-child(2) {
+                    .title {
+                        position: relative;
+                        top: -1px;
+                        left: -4px;
+                    }
+
+                    .text {
+                        position: relative;
+                        top: 0px;
+                        left: -3px;
+                    }
+                }
+
+                li:nth-child(3) {
+                    .title {
+                        position: relative;
+                        top: -2px;
+                        left: -4px;
+                    }
+                }
+
+                li:nth-child(4) {
+                    .text {
+                        position: relative;
+                        top: 3px;
+                        left: -1px;
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        .title {
+                            top: -2px;
+                        }
+
+                        .text {
+                            top: -3px;
+                        }
+                    }
+                }
+
+                li:nth-child(5) {
+                    @media screen and (max-width: var.$phablet) {
+                        .title {
+                            top: 0px;
+                        }
+                    }
+                }
+
+                li:nth-child(6) {
+                    .text {
+                        position: relative;
+                        top: -4px;
+                        left: -14px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            top: 3px;
+                            left: -1px;
+                        }
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                    }
+                }
+
+                li:nth-child(7) {
+                    .text {
+                        position: relative;
+                        top: 0px;
+                        left: -5px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            top: 6px;
+                            left: 0px;
+                        }
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        border-bottom-left-radius: 40px !important;
+                        border-bottom-right-radius: 40px !important;
+                        margin-bottom: 8px !important;
+                    }
+                }
+            }
+        }
+
+        .note {
+            margin-top: 30px;
+            font-size: 20px;
+            line-height: var.$leading-lg;
+            font-family: var.$font-metropolis;
+            max-width: 1350px;
+            margin: 30px var.$auto 30px;
+
+            @media screen and (max-width: var.$phablet) {
+                margin-top: 20px;
+                font-size: 14px;
+                line-height: 26px;
+                margin-bottom: 0px;
+                text-align: center !important;
+                line-height: 23px !important;
+            }
+        }
+
+        .btnWrapper {
+            margin-top: 54px;
+            text-align: var.$center;
+
+            @media screen and (max-width: var.$phablet) {
+                margin-top: 28px;
+                margin-bottom: 0px;
+
+                .btn {
+                    height: 76px !important;
+                    width: 100% !important;
+                    padding: 0px 27px 0px 23px !important;
+                    box-shadow: 0px 12px 0px #c9a31f, 0px 24px 0px -4px rgb(255 184 0 / 19%) !important;
+                }
+
+                p {
+                    position: relative;
+                    left: 15px;
+
+                    .lg {
+                        font-size: 21px !important;
+                        line-height: 24px !important;
+                        position: relative;
+                        bottom: 5px;
+                    }
+                }
+            }
+
+            .btn {
+                background: color.$light-yellow;
+                border-radius: 15px;
+                width: var.$full;
+                max-width: 281px;
+                border: var.$border-none;
+                display: var.$inline-flex;
+                align-items: var.$center;
+                gap: 20px;
+                position: var.$relative;
+                padding: 8px 33px;
+                cursor: var.$cursor-pointer;
+                box-shadow: 0px 4px 0px #c9a31f, 0px 8px 0px -4px rgb(255 184 0 / 19%);
+                height: 60px;
+                border-radius: 12px;
+                transition: all ease-in-out 0.5s;
+
+                &:hover {
+                    transition: all ease-in-out 0.5s;
+                    background: color.$tangerine-yellow;
+                }
+
+                &:active {
+                    background: color.$candlelight;
+                    box-shadow: 0px 2px 0px color.$persian-green, 0px 8px 0px -4px color.$cream-and-butter;
+                    transition: all ease-in-out 0.5s;
+                    transform: translateY(2px);
+                }
+
+                &:disabled {
+                    background: color.$light-gray;
+                    box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+                    transition: all ease-in-out 0.5s;
+                    color: color.$white;
+                    transform: translateY(0px);
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+
+                span {
+                    text-align: var.$center;
+                    display: var.$block;
+
+                    &.lg {
+                        font-weight: var.$font-bold;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+
+                    &.sm {
+                        font-weight: var.$font-light;
+                        font-size: 14px;
+                        line-height: 16px;
+                        sup {
+                            font-size: 6px;
+                        }
+                    }
+                }
+
+                .iconArrow {
+                    right: 32px;
+                    width: 13px;
+                    object-fit: var.$contain;
+                    margin-left: 20px;
+
+                    @media screen and (max-width: var.$phablet) {
+                        width: 13px;
+                        right: 24px;
+                    }
+                }
+            }
+
+            &.resBtnWrapper {
+                display: var.$d-none;
+
+                @media screen and (max-width: var.$phablet) {
+                    display: var.$block;
+                }
+            }
+        }
+    }
+}

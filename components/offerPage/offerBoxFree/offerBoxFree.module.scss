@@ -1,0 +1,342 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.offerBoxContainer {
+    width: var.$full;
+    max-width: 780px;
+    margin: 40px var.$auto 80px;
+    padding: 0px 15px;
+
+    @media screen and (max-width: var.$reg-tablet) {
+        text-align: var.$center;
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+        margin-bottom: 40px;
+    }
+
+    .boxLabel {
+        letter-spacing: 0.1em;
+        padding: 5.5px 13px;
+        font-family: var.$font-metropolis;
+        text-align: var.$center;
+        color: color.$forest-green;
+        background: color.$bright-gray;
+        width: var.$full;
+        max-width: 200px;
+        border-radius: 5px;
+        margin: 0px var.$auto;
+        text-transform: uppercase;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            letter-spacing: 0.1em;
+            padding: 5.5px 13px;
+            font-family: var.$font-metropolis;
+            text-align: var.$center;
+            color: color.$forest-green;
+            background: color.$bright-gray;
+            width: var.$full;
+            max-width: 200px;
+            border-radius: 5px;
+            margin: 0px var.$auto;
+            text-transform: uppercase;
+            width: var.$full;
+            max-width: 200px;
+            padding: 5px 13px;
+            color: color.$forest-green;
+            background: color.$bright-gray;
+            border-radius: 5px;
+        }
+
+        .boxLabelText {
+            font-size: 14px;
+            line-height: 14px;
+            width: var.$full;
+            max-width: 170px;
+            font-weight: var.$font-semibold;
+        }
+    }
+
+    .title {
+        font-weight: var.$font-bold;
+        font-size: 32px;
+        line-height: var.$leading-xl;
+        margin-bottom: 12px;
+        text-align: var.$center;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            font-size: 28px;
+            line-height: 32px;
+            margin-top: 18px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            margin-bottom: 30px;
+        }
+
+        span {
+            color: color.$persian-rose;
+        }
+    }
+
+    .offerBoxTable {
+        display: var.$flex;
+        align-items: var.$center;
+        list-style: var.$d-none;
+        padding: 24px 38px;
+        flex-wrap: var.$wrap;
+        border: 1px var.$decoration-solid color.$chinese-silver;
+        border-radius: 16px;
+        margin: 0px;
+
+        @media screen and (max-width: var.$phablet) {
+            padding: 24px 15px;
+
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            border: var.$d-none;
+            padding: 0px;
+            width: var.$full;
+            // max-width: 254px;
+            margin: 0px var.$auto;
+        }
+
+        .tableItem {
+            width: var.$w-3-12;
+            text-align: var.$center;
+            position: var.$relative;
+
+            @media screen and (max-width: var.$phablet) {
+                width: var.$full;
+                max-width: var.$full;
+                padding: 20px 0px;
+            }
+
+            @media screen and (max-width: var.$mobile-reg) {
+                width: var.$full;
+                padding: 20px 0px;
+                max-width: 254px;
+                margin: 0px var.$auto;
+            }
+
+            &:last-child {
+                @media screen and (max-width: var.$mobile-reg) {
+                    width: var.$full;
+                    padding: 20px 0px 0px;
+                }
+            }
+
+            .itemWrapper {
+                width: 107px;
+                height: 91px;
+                position: var.$relative;
+                margin: var.$auto;
+                display: var.$inline-flex;
+                align-items: var.$center;
+                justify-content: var.$center;
+
+                .badge {
+                    position: var.$relative;
+                    display: var.$inline-flex;
+                    align-items: var.$center;
+                    justify-content: var.$center;
+                    color: color.$white;
+                    font-family: var.$font-metropolis;
+
+                    .sign {
+                        font-weight: var.$font-bold;
+                        font-size: 18px;
+                        line-height: 19px;
+                        position: var.$relative;
+                    }
+
+                    .priceWrap {
+                        position: var.$relative;
+
+                        .price {
+                            font-weight: var.$font-bold;
+                            font-size: 35px;
+                            line-height: 26px;
+                            display: var.$block;
+
+                        }
+
+                        .priceDesc {
+                            font-weight: var.$font-bold;
+                            font-size: 8px;
+                            line-height: 8px;
+                            display: var.$block;
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        position: var.$absolute;
+                        background-image: url('../../../images/icons/icon-price-badge.png');
+                        background-size: var.$contain;
+                        width: 76px;
+                        height: 57px;
+                        background-repeat: var.$no-repeat;
+                    }
+                }
+
+                &.free {
+                    &:before {
+                        content: '';
+                        position: var.$absolute;
+                        background-image: url('../../../images/icons/icon-free.png');
+                        height: var.$full;
+                        width: var.$full;
+                        background-size: var.$contain;
+                        background-repeat: var.$no-repeat;
+                        background-position: var.$center;
+                        left: 0px;
+                        right: 0px;
+                        margin: var.$auto;
+                        top: var.$half;
+                        transform: translate(0px, -(var.$half));
+                    }
+                }
+            }
+
+            .listLabel {
+                font-weight: var.$font-bold;
+                font-size: 14px;
+                line-height: 18px;
+                display: var.$block;
+                margin-bottom: 6px;
+                font-family: var.$font-metropolis;
+                font-weight: var.$font-bold;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    font-size: 20px;
+                    line-height: 31px;
+                }
+            }
+
+            .listPrice {
+                font-weight: var.$font-semibold;
+                font-size: 20px;
+                line-height: 28px;
+                font-family: var.$font-metropolis;
+                color: color.$persian-rose;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    font-size: 30px;
+                    line-height: 28px;
+                }
+            }
+
+            .listDesc {
+                font-weight: var.$font-medium;
+                font-size: 12px;
+                line-height: 16px;
+                width: var.$full;
+                max-width: 98.78px;
+                margin: 0px var.$auto;
+                font-family: var.$font-metropolis;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    font-size: 18px;
+                    line-height: 20px;
+                    width: var.$full;
+                    max-width: 140px;
+                    margin: 8px var.$auto;
+                }
+            }
+
+            &::before {
+                position: var.$absolute;
+                content: '\002B';
+                font-weight: var.$font-bold;
+                font-size: 32px;
+                line-height: 1;
+                color: color.$light-gray;
+                top: var.$half;
+                transform: translate(7px, -(var.$half));
+                right: 0px;
+
+                @media screen and (max-width: var.$phablet) {
+                    left: 0px;
+                    transform: translate(0%, 0%);
+                    bottom: -15px;
+                    top: var.$auto;
+                    color: color.$light-gray;
+                }
+
+                @media screen and (max-width: var.$mobile-l) {
+                    left: 0px;
+                    transform: translate(0%, 0%);
+                    bottom: -15px;
+                    top: var.$auto;
+                    color: color.$light-gray;
+                }
+            }
+
+
+
+            &:nth-last-child(2) {
+                &::before {
+                    content: '\003D';
+                }
+            }
+
+            &:nth-child(even) {
+                &::before {
+                    @media screen and (max-width: var.$phablet) {
+                        display: var.$inline-block;
+
+                    }
+
+                    @media screen and (max-width: var.$mobile-reg) {
+                        display: var.$inline-block;
+                    }
+                }
+            }
+
+            &:last-child {
+                &::before {
+                    display: var.$d-none;
+                }
+            }
+        }
+    }
+
+    .returnText {
+        padding-top: 27px;
+        text-align: var.$right;
+        padding-right: 160px;
+        position: var.$relative;
+
+        @media screen and (max-width: var.$phablet) {
+            display: var.$d-none;
+            // padding-right: 125px;
+        }
+
+        @media screen and (max-width: var.$mobile-reg) {
+            display: var.$d-none;
+        }
+
+        &:before {
+            position: var.$absolute;
+            content: '';
+            background-image: url('../../../images/icons/icon-arrow-draw.png');
+            width: 40px;
+            height: 48px;
+            background-size: var.$contain;
+            background-repeat: var.$no-repeat;
+            right: 115px;
+            transform: rotate(-70deg);
+            bottom: 0px;
+
+            @media screen and (max-width: var.$mobile-l) {
+                right: 80px;
+            }
+        }
+
+        span {
+            font-weight: var.$font-semibold;
+        }
+    }
+}

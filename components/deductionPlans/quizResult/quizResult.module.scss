@@ -1,0 +1,912 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    position: var.$relative;
+    width: var.$full;
+    max-width: 1140px;
+    display: var.$flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: var.$auto;
+
+    @media screen and (max-width: var.$xl-screen) {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: var.$l-tablet) {
+        padding: 0px 20px;
+    }
+
+    .stickyInclusive {
+        background: #fafafa;
+        width: var.$full;
+        max-width: 330px;
+        position: sticky;
+        top: 230px;
+        right: 0;
+        border: 1px solid color.$dim-gray;
+
+        @media screen and (max-width: var.$xl-screen) {
+            display: var.$d-none;
+        }
+
+        .wrapper {
+            padding: 30px;
+            position: relative;
+
+            .title {
+                font-weight: var.$font-semibold;
+                font-size: 21.4828px;
+                line-height: 22px;
+                color: color.$black-pearl;
+                margin-bottom: 2.7px;
+            }
+
+            .subTitle {
+                font-weight: var.$font-semibold;
+                font-size: 21.4828px;
+                line-height: 22px;
+                color: color.$blue;
+            }
+
+            .list {
+                margin: 15.21px 0px 0px;
+                list-style: var.$d-none;
+                padding-left: 0px;
+                display: var.$flex;
+                flex-wrap: var.$wrap;
+                gap: 9.5px 0px;
+
+                li {
+                    width: var.$half;
+                    position: var.$relative;
+                    padding-left: 14.58px;
+                    font-weight: var.$font-medium;
+                    font-size: 14px;
+                    line-height: 16px;
+
+                    &:before {
+                        content: '';
+                        position: var.$absolute;
+                        background-image: url('../../../images/icons/icon-inclusive-check.png');
+                        width: 8.88px;
+                        height: 6.57px;
+                        background-repeat: var.$no-repeat;
+                        background-size: var.$contain;
+                        left: 0px;
+                        top: var.$half;
+                        transform: translate(0px, -(var.$half));
+                    }
+                }
+            }
+
+            .additionalNotes {
+                font-family: var.$font-metropolis;
+                font-size: 9.54792px;
+                line-height: 10px;
+                margin-top: 8.75px;
+                text-align: var.$center;
+
+                .arrowDraw {
+                    transform: rotate(25deg);
+                }
+
+                span {
+                    font-weight: var.$font-medium;
+                }
+            }
+
+            .btn {
+                border: var.$d-none;
+                display: var.$flex;
+                justify-content: var.$center;
+                align-items: var.$center;
+                padding: 7.16094px 23.8698px 4.77396px;
+                width: var.$full;
+                max-width: 143.22px;
+                height: 36.93px;
+                background: color.$light-yellow;
+                box-shadow: 0px 2.38698px 0px color.$yellow, 0px 4.77396px 0px -2.38698px rgba(255, 184, 0, 0.19);
+                margin-top: 16.76px;
+                border-radius: 7.16094px;
+                text-decoration: none;
+
+                .btnText {
+                    display: var.$flex;
+                    flex-wrap: var.$wrap;
+                    width: 70px;
+                    margin-right: 12px;
+                    color: color.$black-pearl;
+
+                    .lg {
+                        font-weight: var.$font-bold;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+
+                    .sm {
+                        font-size: 11px;
+                        line-height: 10px;
+                    }
+                }
+            }
+        }
+
+        .bgWrapper {
+            height: 441.59px;
+            background-size: var.$cover;
+            background-position: var.$top;
+            position: var.$relative;
+
+            .signWrapper {
+                width: 251.64px;
+                height: 69.49px;
+                position: var.$absolute;
+                left: 0px;
+                right: 0px;
+                margin: var.$auto;
+                bottom: 19.42px;
+                background-color: color.$white;
+                display: var.$flex;
+
+                .logo {
+                    width: 67.46px;
+                    background-color: color.$blue;
+                    height: var.$full;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    padding: 7px;
+                    flex-wrap: var.$wrap;
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+
+                    p {
+                        font-family: var.$font-metropolis;
+                        font-size: 10.1432px;
+                        line-height: 10px;
+                        color: color.$white;
+
+                        sup {
+                            font-size: 5px;
+                        }
+
+                        span {
+                            display: var.$block;
+                            font-weight: var.$font-medium;
+                        }
+                    }
+                }
+
+                .nameSign {
+                    flex: 1;
+                    padding: 6.8px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    flex-wrap: var.$wrap;
+
+                    .name {
+                        font-weight: var.$font-medium;
+                        font-size: 9px;
+                        line-height: 12px;
+                    }
+                }
+            }
+        }
+
+        &.mobShow {
+            display: none;
+            margin: var.$auto;
+
+            @media screen and (max-width: var.$phablet) {
+                display: var.$block;
+                position: var.$relative;
+                top: 0px;
+                left: 0px;
+                transform: translate(0, 0px);
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                width: var.$full;
+                max-width: var.$full;
+            }
+        }
+    }
+
+    .planUserInfo {
+        margin-top: 30px;
+        text-align: var.$center;
+        color: color.$dim-gray;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+
+        .breadcrumb {
+            span {
+                display: var.$inline-block;
+                margin-left: 8px;
+                font-family: var.$font-metropolis;
+            }
+
+            .prev {
+                font-size: 15px;
+                line-height: 15px;
+                text-decoration-line: underline;
+                color: rgba(15, 30, 50, 0.64);
+
+                &.gt {
+                    text-decoration: var.$d-none;
+                }
+            }
+
+            .current {
+                font-size: 15px;
+                line-height: 15px;
+                color: color.$black-pearl;
+            }
+        }
+
+        .userTitle {
+            font-weight: var.$font-normal;
+            font-size: 48px;
+            line-height: 108%;
+            margin-bottom: 10px;
+            margin-top: 50px;
+            color: color.$black-pearl;
+            font-family: var.$font-metropolis;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                font-size: 36px;
+                margin-top: 30px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                font-size: 16px;
+                line-height: 17px;
+                color: color.$dim-gray;
+            }
+
+            span {
+                font-weight: var.$font-bold;
+            }
+        }
+
+        .userDesc {
+            font-weight: var.$font-medium;
+            font-size: 15px;
+            line-height: 15px;
+            font-family: var.$font-metropolis;
+            color: color.$black-pearl;
+        }
+    }
+
+    .planInfo {
+        padding: 30px 30px 14px;
+        width: var.$full;
+        max-width: 762px;
+        margin: var.$auto;
+        background: #f7f7f7;
+
+        @media screen and (max-width: var.$laptop-screen) {
+            padding: 20px;
+        }
+
+        @media screen and (max-width: var.$l-tablet) {
+            max-width: var.$full;
+            background-color: transparent;
+            padding: 20px 0px;
+        }
+
+        @media screen and (max-width: var.$reg-tablet) {
+            padding: 20px 0px 16px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0px;
+
+            &:last-child {
+                @media screen and (max-width: var.$phablet) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .planTabWrapper {
+            padding: 20px 0px 0px;
+            text-align: var.$center;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                padding: 0px;
+            }
+
+            .tabTitle {
+                font-weight: var.$font-bold;
+                font-size: 32px;
+                line-height: 109%;
+                color: color.$black-pearl;
+                margin-bottom: 15px;
+
+                @media screen and (max-width: var.$reg-tablet) {
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+            }
+
+            .tabDesc {
+                font-size: 16px;
+                line-height: 108%;
+                color: color.$black-pearl;
+                margin-bottom: 15px;
+                font-weight: var.$font-medium;
+
+                @media screen and (max-width: var.$reg-tablet) {
+                    font-size: 16px;
+                    line-height: 17px;
+                }
+            }
+
+            .tabs {
+                display: var.$flex;
+                align-items: var.$center;
+                justify-content: var.$center;
+                gap: 8px;
+                flex-wrap: var.$wrap;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid rgba(15, 30, 50, 0.3);
+
+                @media screen and (max-width: var.$phablet) {
+                    justify-content: var.$end;
+                }
+
+                .tab {
+                    background: color.$white;
+                    font-weight: var.$font-medium;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: color.$blue;
+                    padding: 8px;
+                    cursor: var.$cursor-pointer;
+                    transition: all ease 0.3s;
+                    border: 0.75px solid color.$blue;
+                    border-radius: 4px;
+
+                    @media screen and (max-width: var.$phablet) {
+                        width: var.$full;
+                        text-align: var.$left;
+                    }
+
+                    &.active {
+                        background: color.$blue;
+                        color: color.$white;
+                        transition: all ease 0.3s;
+                        border-radius: 0px;
+                    }
+
+                    &.add {
+                        @media screen and (max-width: var.$phablet) {
+                            width: var.$auto;
+                        }
+                    }
+                }
+            }
+
+            .planAcc {
+                .accItem {
+                    .accTitle {
+                        background: color.$white;
+                        border: var.$border var.$decoration-solid color.$black-pearl;
+                        padding: 15px 40px;
+                        font-weight: var.$font-semibold;
+                        font-size: 22px;
+                        line-height: 27px;
+                        color: color.$black-pearl;
+                        text-align: var.$left;
+                        cursor: var.$cursor-pointer;
+                        position: var.$relative;
+
+                        @media screen and (max-width: var.$reg-tablet) {
+                            min-height: 52px;
+                            font-size: 18px;
+                            line-height: 22px;
+                            padding: 14px 40px;
+                        }
+
+                        @media screen and (max-width: var.$phablet) {
+                            border: var.$border var.$decoration-solid color.$blue;
+                            color: color.$blue;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: var.$absolute;
+                            background-image: url('../../../images/icons/icon-deduction-chivron-down.png');
+                            width: 15px;
+                            height: 7.5px;
+                            background-size: var.$contain;
+                            background-repeat: var.$no-repeat;
+                            right: 28.02px;
+                            top: var.$half;
+                            transform: translate(0, -(var.$half));
+                            -webkit-filter: grayscale(var.$full);
+                            filter: grayscale(var.$full);
+
+                            @media screen and (max-width: var.$phablet) {
+                                background-image: url('../../../images/icons/icon-chivron-blue.png');
+                                filter: var.$d-none;
+                                right: 19px;
+                            }
+                        }
+                    }
+
+                    .accBody {
+                        display: var.$d-none;
+                        // height: 0;
+                        // opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                        padding: 36px 36px 40px;
+                        border: var.$border var.$decoration-solid color.$azure;
+                        border-top: var.$d-none;
+                        background-color: color.$titan-white;
+                        text-align: var.$left;
+
+                        @media screen and (max-width: var.$phablet) {
+                            padding: 8px 16px 32px;
+                        }
+
+                        .accDesc {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 140%;
+                            font-family: var.$font-metropolis;
+                            padding-bottom: 16px;
+
+                            @media screen and (max-width: var.$phablet) {
+                                padding-top: 16px;
+                            }
+                        }
+
+                        .innerAcc {
+                            margin-top: 16px;
+
+                            @media screen and (max-width: var.$phablet) {
+                                margin-top: 8px;
+                            }
+
+                            .innerAccItem {
+                                &.active {
+                                    .innerAccTitle {
+                                        &::before {
+                                            transform: translate(0, -(var.$half)) scale(-1);
+                                        }
+                                    }
+
+                                    .innerAccBody {
+                                        display: var.$block;
+                                    }
+                                }
+
+                                .innerAccTitle {
+                                    padding: 16px 45px 16px 25px;
+                                    background: rgba(15, 30, 50, 0.09);
+                                    font-weight: var.$font-bold;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    color: color.$black-pearl;
+                                    position: var.$relative;
+                                    cursor: var.$cursor-pointer;
+
+                                    &::before {
+                                        content: '';
+                                        position: var.$absolute;
+                                        background-image: url('../../../images/icons/icon-deduction-chivron-down.png');
+                                        width: 10px;
+                                        height: 10px;
+                                        background-size: var.$contain;
+                                        background-repeat: var.$no-repeat;
+                                        right: 28.02px;
+                                        top: var.$half;
+                                        transform: translate(0, -(var.$half));
+                                    }
+                                }
+
+                                .innerAccBody {
+                                    padding: 10px 24px 32px;
+                                    background: rgba(225, 227, 237, 0.24);
+                                    display: var.$d-none;
+
+                                    @media screen and (max-width: var.$phablet) {
+                                        padding: 0px 8px 32px;
+                                    }
+
+                                    p {
+                                        font-weight: var.$font-medium;
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                        color: color.$nero;
+                                        padding: 16px 10px;
+
+                                        @media screen and (max-width: var.$phablet) {
+                                            padding: 16px 8px 8px;
+                                        }
+                                    }
+
+                                    & > .innerAcc {
+                                        .innerAccItem {
+                                            .innerAccTitle {
+                                                &::before {
+                                                    transform: translate(0, -(var.$half));
+                                                }
+                                            }
+
+                                            .innerAccBody {
+                                                padding-bottom: 10px;
+                                                background: color.$white-lilac;
+                                                display: var.$d-none;
+
+                                                @media screen and (max-width: var.$phablet) {
+                                                    padding-bottom: 6px;
+                                                }
+                                            }
+
+                                            &.active {
+                                                .innerAccTitle {
+                                                    &::before {
+                                                        transform: translate(0, -(var.$half)) scale(-1);
+                                                    }
+                                                }
+
+                                                .innerAccBody {
+                                                    display: var.$block;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    & > .innerAcc {
+                                        .innerAccBody {
+                                            p {
+                                                padding-top: 10px;
+                                                padding-bottom: 10px;
+
+                                                @media screen and (max-width: var.$phablet) {
+                                                    padding: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.active {
+                        .accTitle {
+                            background: color.$black-pearl;
+                            color: color.$white;
+
+                            &:before {
+                                content: '';
+                                position: var.$absolute;
+                                background-image: url('../../../images/icons/icon-deduction-chivron-down.png');
+                                width: 18px;
+                                height: 11px;
+                                background-size: var.$contain;
+                                background-repeat: var.$no-repeat;
+                                top: var.$half;
+                                transform: translate(0, -(var.$half));
+                                right: 19px;
+                            }
+                        }
+
+                        .innerAccTitle {
+                            &:before {
+                                transform: translate(0, -(var.$half)) scale(-1);
+                            }
+                        }
+
+                        .accBody {
+                            border: 1px var.$decoration-solid color.$black-pearl;
+                            border-top: var.$d-none;
+                            display: var.$block;
+                            // height: auto;
+                            // opacity: 1;
+                        }
+                    }
+
+                    &.active {
+                        .accTitle {
+                            &:before {
+                                transform: translate(0, -(var.$half)) scale(-1);
+                                filter: brightness(0) invert(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .supportWrapper {
+        width: var.$full;
+        max-width: 724px;
+        margin: 50px var.$auto;
+        display: var.$flex;
+        background-color: #fafafa;
+        border: var.$border var.$decoration-solid color.$dim-gray;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            margin: 0px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            display: var.$d-none;
+        }
+
+        .left {
+            padding: 24px 40px;
+            flex: 1;
+            display: var.$flex;
+            flex-wrap: var.$wrap;
+            align-items: var.$center;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                padding: 24px;
+            }
+
+            .title {
+                font-weight: var.$font-semibold;
+                font-size: 24px;
+                line-height: 24px;
+                color: color.$black-pearl;
+                width: var.$full;
+                max-width: 292px;
+                margin-bottom: 10px;
+
+                span {
+                    color: color.$blue;
+                }
+            }
+
+            .inclusiveWrapper {
+                .inclusiveTitle {
+                    font-weight: var.$font-semibold;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: color.$mountain-meadow;
+
+                    span {
+                        display: var.$inline-block;
+                        margin-left: 2.51px;
+                    }
+                }
+
+                .list {
+                    display: var.$flex;
+                    flex-wrap: var.$wrap;
+                    list-style: var.$d-none;
+                    padding-left: 0px;
+                    margin: 8px 0px 0px;
+                    gap: 6px 0px;
+
+                    .item {
+                        width: var.$half;
+                        font-weight: var.$font-medium;
+                        font-size: 18px;
+                        line-height: 16px;
+                        color: color.$black-pearl;
+                        padding-left: 14.45px;
+                        position: var.$relative;
+
+                        @media screen and (max-width: var.$reg-tablet) {
+                            width: var.$full;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: var.$absolute;
+                            background-image: url('../../../images/icons/icon-green-check-solid.png');
+                            background-size: var.$contain;
+                            width: 9px;
+                            height: 8px;
+                            background-repeat: var.$no-repeat;
+                            left: 0px;
+                            transform: translate(0, -(var.$half));
+                            top: var.$half;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                display: var.$flex;
+                justify-content: center;
+                align-items: center;
+                background: color.$light-yellow;
+                box-shadow: 0px 2.365px 0px color.$yellow, 0px 4.73px 0px -2.365px rgba(255, 184, 0, 0.19);
+                border-radius: 7.09501px;
+                height: 38px;
+                font-weight: var.$font-bold;
+                font-size: 16px;
+                line-height: 14px;
+                color: color.$black-pearl;
+                border: var.$d-none;
+                width: var.$full;
+                max-width: 193px;
+                margin-top: 16px;
+                text-decoration: none;
+            }
+        }
+
+        .right {
+            width: var.$full;
+            max-width: 289px;
+            background-size: var.$cover;
+            position: var.$relative;
+
+            .infoWrapper {
+                padding: 0px 20px;
+                margin: var.$auto;
+                position: var.$absolute;
+                left: 0;
+                right: 0;
+                bottom: 11.67px;
+                height: 55.33px;
+
+                .userInfo {
+                    width: var.$full;
+                    max-width: 200px;
+                    background-color: color.$white;
+                    margin: var.$auto;
+                    height: var.$full;
+                    display: var.$flex;
+                    align-items: var.$center;
+
+                    .logo {
+                        background: color.$blue;
+                        width: 53.71px;
+                        padding: 5px;
+                        display: var.$flex;
+                        height: var.$full;
+                        align-items: var.$center;
+                        flex-wrap: var.$wrap;
+
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+
+                        .logoText {
+                            font-family: var.$font-metropolis;
+                            font-size: 8px;
+                            line-height: 8px;
+                            color: color.$white;
+
+                            sup {
+                                font-size: 4px;
+                            }
+
+                            span {
+                                font-weight: var.$font-medium;
+                                display: var.$block;
+                            }
+                        }
+                    }
+
+                    .nameSign {
+                        display: var.$flex;
+                        align-items: var.$center;
+                        flex-wrap: var.$wrap;
+                        padding: 5px;
+
+                        .name {
+                            font-family: var.$font-metropolis;
+                            font-weight: var.$font-medium;
+                            font-size: 7.5px;
+                            line-height: 10px;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .qna {
+        width: var.$full;
+        max-width: 822px;
+        margin: var.$auto;
+        padding: 34px 0px 0px;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            padding: 0px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            padding-top: 16px;
+        }
+
+        .qnaLists {
+            list-style: var.$d-none;
+            padding-left: 0px;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin: 0px;
+            }
+
+            .qnaItem {
+                margin-bottom: 24px;
+
+                .qnaTitle {
+                    font-weight: var.$font-semibold;
+                    font-size: 35px;
+                    line-height: 1;
+                    color: color.$black-pearl;
+                    padding-bottom: 8px;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        font-size: 32px;
+                        line-height: 160%;
+                    }
+
+                    @media screen and (max-width: var.$phablet) {
+                        font-size: 20px;
+                        line-height: 26px;
+                        padding-bottom: 0px;
+                    }
+                }
+
+                .qnaAns {
+                    p {
+                        font-family: var.$font-metropolis;
+                        font-size: 18px;
+                        line-height: 160%;
+                        color: color.$black;
+                        margin: 10px var.$auto 16px;
+                        font-weight: var.$font-normal;
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+
+                        a {
+                            color: color.$blue;
+                            font-weight: var.$font-semibold;
+                        }
+
+                        .getStarted {
+                            display: var.$inline-block;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .qnaNote {
+            font-weight: var.$font-medium;
+            font-size: 13px;
+            line-height: 18px;
+            color: color.$dim-gray;
+            padding-top: 24px;
+            margin-top: 24px;
+            border-top: 1px var.$decoration-solid rgba(0, 0, 0, 0.16);
+            margin-bottom: 53.72px;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin-bottom: 30px;
+            }
+
+            a {
+                color: color.$dim-gray;
+            }
+        }
+    }
+}

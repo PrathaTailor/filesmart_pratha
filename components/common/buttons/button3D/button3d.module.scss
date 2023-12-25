@@ -1,0 +1,20 @@
+@use '../../../../styles/variable' as var;
+@use '../../../../styles/colors' as color;
+
+.button {
+    background: color.$light-yellow;
+    box-shadow: 0px 10px 0px color.$yellow, 0px 18px 0px -4px color.$spring-green;
+    border-radius: 15px;
+    font-weight: var.$font-bold;
+    font-size: 29px;
+    line-height: 29px;
+    display: var.$inline-flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+    color: color.$vulcan;
+    width: var.$full;
+    max-width: var.$dimension-button;
+    border: none;
+    height: 75px;
+    padding: 27px 54px;
+}

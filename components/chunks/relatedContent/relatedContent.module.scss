@@ -1,0 +1,117 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  width: var.$full;
+  max-width: 1488px;
+  margin: var.$auto;
+  padding: 0px 24px;
+
+  @media screen and (max-width: var.$phablet) {
+    padding: 0px 24px 60px;
+  }
+
+  .wrapper {
+    .title {
+      font-weight: var.$font-bold;
+      font-size: 35px;
+      line-height: 160%;
+      color: color.$base-black;
+      text-align: var.$center;
+      margin-bottom: 14px;
+
+      @media screen and (max-width: var.$phablet) {
+        font-size: 18px;
+        line-height: 105.5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .blocks {
+      display: var.$flex;
+      gap: 24px;
+
+      @media screen and (max-width: var.$xl-tablet) {
+        flex-wrap: var.$wrap;
+      }
+
+      .block {
+        width: var.$full;
+        max-width: 464px;
+        border: 1px solid #D0D5DD;
+
+        @media screen and (max-width: var.$xl-tablet) {
+          max-width: var.$full;
+          border-radius: 6px;
+        }
+
+        .bannerWrapper {
+          height: 220px;
+
+          .banner {
+            width: var.$full;
+            height: var.$full;
+            object-fit: var.$cover;
+            border-radius: 6px;
+          }
+        }
+
+        .blockDesc {
+          padding: 32px 24px;
+
+          @media screen and (max-width: var.$phablet) {
+            padding: 20px;
+          }
+
+          .blockTitle {
+            font-weight: var.$font-bold;
+            font-size: 22px;
+            line-height: 30px;
+            color: color.$base-black;
+            margin-bottom: 15px;
+
+            @media screen and (max-width: var.$phablet) {
+              font-size: 18px;
+              line-height: 22px;
+              margin-bottom: 10px;
+            }
+          }
+
+          .content {
+
+            p {
+              font-weight: var.$font-semibold;
+              font-size: 16px;
+              line-height: 26px;
+              color: color.$base-black;
+              -webkit-box-orient: vertical;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: normal;
+
+              @media screen and (max-width: var.$phablet) {
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: var.$font-normal;
+                -webkit-line-clamp: 5;
+              }
+
+            }
+
+            a {
+              color: #4217BC;
+              font-weight: var.$font-bold;
+            }
+
+
+          }
+
+
+        }
+      }
+    }
+  }
+}

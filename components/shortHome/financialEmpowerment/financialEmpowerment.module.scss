@@ -1,0 +1,206 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.fluid {
+    padding: 75px 20px;
+
+    @media screen and (max-width: var.$xl-tablet) {
+        padding: 71px 30px 104px;
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+        padding: 40px 16px 54px;
+    }
+
+    button {
+        cursor: var.$cursor-pointer;
+    }
+
+    .container {
+        width: var.$full;
+        max-width: 1520px;
+        margin: var.$auto;
+        text-align: var.$center;
+
+        .financialTitle {
+            font-weight: var.$font-semibold;
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 15px;
+            color: color.$blue;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                font-size: 36px;
+                margin-bottom: 11px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                line-height: 45px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 32px;
+                line-height: 45px;
+                margin-bottom: 8px;
+            }
+        }
+
+        p {
+            font-family: var.$font-metropolis;
+            font-weight: var.$font-light;
+            font-size: 18px;
+            line-height: 26px;
+            width: var.$full;
+            max-width: 925px;
+            margin: var.$auto;
+            margin-bottom: 25px;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                margin-bottom: 41px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin-bottom: 25px;
+            }
+        }
+        sup {
+            font-size: 9px;
+        }
+        .financialWrapper {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: var.$flex;
+            gap: 160px;
+            justify-content: var.$center;
+
+            @media screen and (max-width: var.$xl-screen) {
+                gap: 80px;
+            }
+
+            @media screen and (max-width: var.$xl-tablet) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                flex-wrap: var.$wrap;
+                gap: 60px 96px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                gap: 54px 20px;
+            }
+
+            .box {
+                width: var.$full;
+                max-width: 196px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    max-width: 226px;
+                    margin-bottom: 0px;
+                }
+
+                .boxDesc {
+                    font-weight: var.$font-bold;
+                    font-size: 22px;
+                    line-height: 27px;
+                    text-align: var.$center;
+                    letter-spacing: 0.3px;
+                    color: color.$korma;
+                    margin-top: 35px;
+
+                    @media screen and (max-width: var.$xl-tablet) {
+                        margin-top: 20px !important;
+                        margin-bottom: 0px;
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+
+        .getStarted {
+            @media screen and (max-width: var.$xl-tablet) {
+                margin-top: 60px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                display: var.$flex;
+                flex-direction: var.$flex-col;
+            }
+
+            .lg {
+                font-size: 30px;
+                line-height: 43.5px;
+                font-weight: var.$font-semibold;
+                width: var.$full;
+                max-width: var.$full;
+                margin-bottom: 0px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+
+            .sm {
+                font-size: 26px;
+                line-height: 37.7px;
+                width: var.$full;
+                max-width: var.$full;
+                margin-bottom: 25px;
+
+                @media screen and (max-width: var.$xl-tablet) {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+
+                @media screen and (max-width: var.$mobile-l) {
+                    margin-bottom: 0px;
+                    margin-top: 10px;
+                }
+            }
+
+            .btn {
+                background: color.$light-yellow;
+                border-radius: 8px;
+                padding: 14px 24px;
+                width: var.$full;
+                max-width: 377px;
+                height: 52px;
+                font-weight: var.$font-semibold;
+                font-size: 24px;
+                line-height: 24px;
+                border: var.$d-none;
+                transition: all ease 0.3s;
+                cursor: pointer;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    order: 4;
+                }
+
+                &:hover {
+                    background: color.$tangerine-yellow;
+                    transition: all ease 0.3s;
+                }
+
+                &:disabled {
+                    background: color.$light-gray;
+                    transition: all ease 0.3s;
+                    color: color.$white;
+                }
+            }
+
+            .fileTax {
+                font-weight: var.$font-semibold;
+                font-size: 28px;
+                line-height: 39px;
+                text-align: var.$center;
+                color: color.$blue;
+                margin-top: 50px;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    margin-top: 10px;
+                    margin-bottom: 34px;
+                }
+            }
+        }
+    }
+}

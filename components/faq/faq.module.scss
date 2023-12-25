@@ -1,0 +1,231 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 78px;
+
+    @media screen and (max-width: var.$xl-screen) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .container {
+        width: var.$full;
+        max-width: 898.8px;
+        margin: var.$auto;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .title {
+            font-weight: var.$font-semibold;
+            font-size: 36px;
+            line-height: 46px;
+            text-align: var.$center;
+            color: color.$vulcan;
+            margin-bottom: 50.4px;
+
+            @media screen and (max-width: var.$reg-screen) {
+                font-size: 45px;
+                line-height: 50px;
+                margin-bottom: 30px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                font-size: 36px;
+                line-height: 42px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 28px;
+                line-height: 35px;
+            }
+        }
+
+        .faqLists {
+            width: var.$full;
+            max-width: 1070px;
+            margin: var.$auto;
+
+            .faqItem {
+                margin-bottom: 7.4px;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    margin-bottom: 20.4px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .faqTitle {
+                    background: color.$lavender;
+                    border: 1px var.$decoration-solid color.$black-pearl;
+                    padding: 8.4px 25.2px 8.4px 52.2px;
+                    font-weight: var.$font-medium;
+                    font-size: 18px;
+                    line-height: 26px;
+                    min-height: 42.8px;
+                    position: var.$relative;
+                    font-family: var.$font-metropolis;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    cursor: pointer;
+
+                    a{
+                        text-decoration: var.$d-none;
+                        color: color.$vulcan;
+                    }
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 18px;
+                        line-height: var.$leading-lg;
+                        padding: 20px 30px 20px 68px;
+                    }
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: var.$absolute;
+                        background: color.$vulcan;
+                    }
+
+                    &:before {
+                        width: 10px;
+                        height: 2px;
+                        top: var.$half;
+                        left: 25px;
+                        transform: translate(0px, -(var.$half));
+
+                        @media screen and (max-width: var.$phablet) {
+                            width: 21px;
+                            height: 4px;
+                            top: 49%;
+                            left: 29px;
+                        }
+                    }
+
+                    &:after {
+                        width: 2px;
+                        height: 10px;
+                        top: var.$half;
+                        transform: translate(0px, -(var.$half));
+                        left: 29px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            width: 4px;
+                            height: 20px;
+                            top: 49%;
+                            transform: translate(0px, -50%);
+                            left: 38px;
+                        }
+                    }
+                }
+
+                .faqBody {
+                    font-size: 26px;
+                    line-height: var.$leading-xl;
+                    font-family: var.$font-metropolis;
+                    padding: 25px 28px 25px 32px;
+                    border: 1px var.$decoration-solid color.$black-pearl;
+                    border-top: var.$d-none;
+                    display: var.$d-none;
+
+                    @media screen and (max-width: var.$l-tablet) {
+                        font-size: 22px;
+                        line-height: 32px;
+                        padding: 30px 40px 30px 38px;
+                        gap: 29px;
+                    }
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 18px;
+                        line-height: 30px;
+                        padding: 30px 40px 30px 38px;
+                        gap: 29px;
+
+                    }
+
+                    ul {
+                        display: var.$flex;
+                        flex-direction: var.$flex-col;
+                        gap: 24px;
+                        padding-left: 10px;
+                        margin: 0px 0px;
+
+
+                        @media screen and (max-width: var.$mobile-l) {
+                            padding-left: 13px;
+                            gap: 11px;
+                        }
+
+                        li {
+                            font-size: 16px;
+                            line-height: 24px;
+
+                            @media screen and (max-width: var.$phablet) {
+                                font-size: 18px;
+                                line-height: 27px;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: var.$font-light;
+
+                        @media screen and (max-width: var.$phablet) {
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+
+                &.active {
+                    .faqTitle {
+                        background: color.$blue;
+                        border: 0.84px var.$decoration-solid color.$black-pearl;
+                        color: color.$white;
+
+                        a{
+                            color: color.$white;
+                        }
+
+                        &:before {
+                            background: color.$white;
+                        }
+
+                        &:after {
+                            display: var.$d-none;
+                        }
+                    }
+
+                    .faqBody {
+                        display: var.$flex;
+                        flex-direction: var.$flex-col;
+                        gap: 24px;
+
+                        @media screen and (max-width: var.$phablet) {
+                            gap: 12px;
+                            padding: 30px 40px 30px 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

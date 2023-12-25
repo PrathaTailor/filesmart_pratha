@@ -1,0 +1,80 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    text-align: var.$center;
+    width: var.$full;
+    max-width: 964px;
+    margin: 50px var.$auto 50px;
+
+    @media screen and (max-width: var.$xl-screen) {
+        margin: 60px var.$auto 60px;
+        padding: 0px 16px;
+    }
+
+    @media screen and (max-width: var.$xl-tablet) {
+        margin: 40px var.$auto 60px;
+        padding: 0px 16px;
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+        margin: 40px var.$auto 60px;
+        padding: 0px 16px;
+    }
+
+    .title {
+        font-weight: var.$font-bold;
+        font-size: 44px;
+        line-height: 50px;
+        color: color.$vulcan;
+        width: var.$full;
+        max-width: 588px;
+        margin: 0px var.$auto 20px;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            font-size: 32px;
+            line-height: 33px;
+            margin: 0px var.$auto 15px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            width: var.$full;
+            max-width: 358px;
+            margin: 0px var.$auto 15px;
+        }
+
+
+        span {
+            color: color.$blue;
+        }
+    }
+
+    .desc {
+        font-size: 24px;
+        line-height: 30px;
+        font-family: var.$font-metropolis;
+        font-weight: var.$font-normal;
+        width: var.$full;
+        max-width: 764px;
+        margin: 0px var.$auto;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+            width: var.$full;
+            max-width: 358px;
+            font-size: 18px;
+            line-height: 22.5px;
+            margin: 0px var.$auto;
+            font-weight: var.$font-normal;
+
+        }
+
+        span {
+            font-weight: var.$font-semibold;
+        }
+    }
+}

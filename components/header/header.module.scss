@@ -1,0 +1,257 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.container {
+    width: var.$full;
+    max-width: 1508.64px;
+    margin: 25.2px var.$auto 25.2px var.$auto;
+    padding: 0px;
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$flex-between;
+    height: 84px;
+
+    @media screen and (max-width: var.$xl-screen) {
+        align-items: var.$center;
+        padding: 0px 20px;
+    }
+
+    @media screen and (max-width: var.$reg-tablet) {
+        padding: 0px 20px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        height: 133px;
+        padding: 20px 16px;
+        margin: 0px var.$auto;
+    }
+
+    .logoWrapper {
+        height: 84px;
+        width: var.$full;
+        max-width: 84px;
+
+        @media screen and (max-width: var.$phablet) {
+            min-width: 93px !important;
+            max-width: 93px !important;
+            min-height: 93px !important;
+            height: 93px;
+        }
+
+        span {
+            @media screen and (max-width: var.$phablet) {
+                min-width: 93px !important;
+                max-width: 93px !important;
+                min-height: 93px !important;
+            }
+        }
+
+        .logo {
+            object-fit: var.$contain;
+            cursor: var.$cursor-pointer;
+
+            @media screen and (max-width: var.$phablet) {
+                min-width: 93px !important;
+                min-height: 93px !important;
+                max-width: 93px !important;
+            }
+        }
+    }
+
+    .loginContainer {
+        width: var.$full;
+        display: var.$flex;
+        flex-direction: var.$flex-col;
+        align-items: var.$end;
+        padding: 0px;
+        gap: 12px;
+
+        @media screen and (max-width: var.$phablet) {
+            display: var.$flex;
+            flex-direction: var.$flex-col;
+            height: 80%;
+            justify-content: var.$center;
+            position: var.$relative;
+        }
+
+        .login {
+            justify-content: var.$end;
+            display: var.$flex;
+            align-items: var.$center;
+            cursor: var.$cursor-pointer;
+
+            @media screen and (max-width: var.$phablet) {
+                margin-bottom: 0px;
+            }
+
+            .iconLogin {
+                display: var.$inline-block;
+                height: 31px;
+                width: 31px;
+
+                @media screen and (max-width: var.$reg-screen) {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    height: 16px;
+                    width: 16px;
+                    object-fit: var.$contain;
+                }
+            }
+
+            .loginBtn {
+                padding: 2px 22px;
+                font-weight: var.$font-bold;
+
+                @media screen and (max-width: var.$phablet) {
+                    padding: 2px 0px;
+                    margin: 0;
+                }
+            }
+
+            span {
+                display: var.$inline-block;
+                font-size: 18px;
+                line-height: 22.32px;
+                color: color.$vulcan;
+                font-weight: var.$font-bold;
+
+                @media screen and (max-width: var.$phablet) {
+                    font-size: 18px;
+                    font-weight: var.$font-normal;
+                    margin-left: 33.24px;
+                }
+
+                @media screen and (max-width: var.$mobile-sm) {
+                    margin-left: 10px;
+                }
+
+                button {
+                    height: 40px;
+                    margin-left: 0px;
+                    background-color: color.$light-yellow;
+                    padding: 10px 24px 8px 24px;
+                    border-radius: 8px;
+                    border: var.$d-none;
+                    box-shadow: 0px 4px 0px color.$yellow, 0px 2px 0px -4px color.$spring-green;
+                    display: var.$flex;
+                    gap: 10px;
+                    align-items: var.$center;
+                    justify-content: var.$center;
+                    cursor: var.$cursor-pointer;
+                    font-weight: var.$font-bold;
+                    transition: all ease-in-out 0.5s;
+                    color: color.$vulcan;
+
+                    &:hover {
+                        transition: all ease-in-out 0.5s;
+                        background: color.$tangerine-yellow;
+                    }
+
+                    &:active {
+                        background: color.$candlelight;
+                        box-shadow: 0px 2px 0px color.$persian-green, 0px 8px 0px -4px color.$cream-and-butter;
+                        transition: all ease-in-out 0.5s;
+                        transform: translateY(2px);
+                    }
+
+                    &:disabled {
+                        background: color.$light-gray;
+                        box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px color.$spring-green;
+                        transition: all ease-in-out 0.5s;
+                        color: color.$white;
+                        transform: translateY(0px);
+                    }
+                }
+            }
+        }
+
+        .languageToggler {
+            font-family: var.$font-metropolis;
+            font-style: var.$italic;
+            font-size: 16px;
+            line-height: 16px;
+            cursor: var.$cursor-pointer;
+            margin-right: 2px;
+            letter-spacing: 0.2px;
+
+            @media screen and (max-width: var.$phablet) {
+                font-size: 12px;
+                line-height: var.$leading-lg;
+            }
+        }
+    }
+}
+
+.centeredContainer {
+    width: var.$full;
+    max-width: 1508.64px;
+    margin: 25.2px var.$auto 25.2px var.$auto;
+    padding: 0px;
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+    height: 84px;
+
+    @media screen and (max-width: var.$xl-screen) {
+        align-items: var.$center;
+        padding: 0px 20px;
+    }
+
+    @media screen and (max-width: var.$reg-tablet) {
+        padding: 0px 20px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        height: 133px;
+        padding: 20px 16px;
+        margin: 0px var.$auto;
+    }
+}
+.toggleWrapper {
+    @media screen and (max-width: var.$xl-tablet) {
+        padding: 0px 40px;
+    }
+
+    .menuIconWrapper {
+        padding: 10px 0px;
+    }
+}
+.navbarSmallContainer {
+    display: var.$flex;
+    flex-direction: var.$flex-col;
+    align-items: var.$start;
+    padding: 10px 15px;
+    gap: 8px;
+    width: var.$full;
+    list-style: var.$d-none;
+    color: color.$base-black;
+    font-weight: var.$font-bold;
+    text-align: var.$left;
+    margin: 0px;
+
+    li {
+        width: var.$full;
+        display: var.$flex;
+        align-items: var.$center;
+        font-size: 18px;
+        line-height: 22.32px;
+        padding: 10px 10px;
+        cursor: var.$cursor-pointer;
+
+        &.active {
+            color: color.$blue;
+
+            a {
+                color: color.$blue;
+            }
+        }
+
+        &:hover {
+            color: color.$blue;
+            border-bottom: var.$border var.$decoration-solid;
+        }
+    }
+}

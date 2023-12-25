@@ -1,0 +1,199 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.ctaWrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0px 0px;
+    background: linear-gradient(145.06deg, color.$blue 0%, color.$robins-egg-blue 133.87%);
+
+    @media screen and (max-width: var.$lg-screen) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (max-width: var.$reg-screen) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1710px;
+        margin: var.$auto;
+        padding-left: 60px;
+        padding-right: 60px;
+        text-align: var.$center;
+        position: var.$relative;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            padding: 68px 19px;
+            background: linear-gradient(150.83deg, color.$blue 0%, color.$robins-egg-blue var.$full);
+        }
+
+        .title {
+            font-weight: var.$font-semibold;
+            font-size: 44px;
+            line-height: 50px;
+            margin-bottom: 20px;
+            color: color.$white;
+
+            @media screen and (max-width: var.$xl-tablet) {
+                font-size: 40px;
+                line-height: 44px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                font-size: 36px;
+                line-height: 42px;
+            }
+
+            @media screen and (max-width: var.$phablet) {
+                font-size: 28px;
+                line-height: 32px;
+                color: color.$white;
+                margin-bottom: 10px;
+            }
+        }
+
+        .content {
+            font-weight: var.$font-light;
+            font-size: 24px;
+            line-height: 36px;
+            margin: var.$auto;
+            color: color.$white;
+
+            @media screen and (max-width: var.$reg-screen) {
+                font-size: var.$text-reg-lg;
+                line-height: var.$leading-xl;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                font-size: 24px;
+                line-height: 34px;
+            }
+
+            @media screen and (max-width: var.$phablet) {
+                font-size: 18px;
+                line-height: 24px;
+                color: color.$white;
+            }
+        }
+
+        .btnWrapper {
+            margin-top: 40px;
+            text-align: var.$center;
+
+            @media screen and (max-width: var.$reg-screen) {
+                margin-top: 60px;
+            }
+
+            .btn {
+                width: var.$full;
+                max-width: 240px;
+                height: 60px;
+                background: color.$light-yellow;
+                border-radius: 15px;
+                border: var.$d-none;
+                display: var.$flex;
+                align-items: var.$center;
+                justify-content: var.$center;
+                margin: var.$auto;
+                padding: 0px;
+                box-shadow: 0px 4px 0px color.$yellow, 0px 8px 0px -4px rgba(255, 184, 0, 0.19);
+                transition: all ease-in-out 0.5s;
+                cursor: var.$cursor-pointer;
+                color: #0A0A14;
+
+                &:hover {
+                    transition: all ease-in-out 0.5s;
+                    background: color.$tangerine-yellow;
+                }
+
+                &:active {
+                    background: color.$candlelight;
+                    box-shadow: 0px 2px 0px color.$persian-green, 0px 8px 0px -4px color.$cream-and-butter;
+                    transition: all ease-in-out 0.5s;
+                    transform: translateY(2px);
+                }
+
+                &:disabled {
+                    background: color.$light-gray;
+                    box-shadow: 0px 4px 0px color.$dark-gray, 0px 8px 0px -4px rgba(186, 186, 186, 0.19);
+                    transition: all ease-in-out 0.5s;
+                    color: color.$white;
+                    transform: translateY(0px);
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    padding: 0px 0px 0px 0px;
+                }
+
+                .btnText {
+                    padding: 0px 19px 0px 0px;
+
+                }
+
+                span {
+                    display: var.$block;
+
+                    &.lg {
+                        font-weight: var.$font-bold;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+
+                    &.sm {
+                        font-weight: var.$font-light;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                .arrow {
+                    display: var.$inline-block;
+
+                    @media screen and (max-width: var.$phablet) {
+                        width: 13px;
+                    }
+                }
+            }
+
+            &.resBtnWrapper {
+                display: var.$d-none;
+                transition: all ease 0.5s;
+
+                .btn {
+                    height: 46px;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 29px;
+                    box-shadow: 0px 10px 0px color.$yellow, 0px 18px 0px -4px color.$spring-green;
+                }
+
+                @media screen and (max-width: var.$phablet) {
+                    display: var.$block;
+                    position: var.$fixed;
+                    bottom: 40px;
+                    left: 0px;
+                    right: 0px;
+                    z-index: 99;
+                }
+            }
+        }
+    }
+}

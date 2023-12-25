@@ -1,0 +1,64 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.root {
+  display: var.$flex;
+  flex-flow: var.$flex-col;
+
+  .refundContainer {
+    @media screen and (max-width: var.$xl-tablet) {
+      padding: 0px 20px;
+    }
+
+    .refundWrapper {
+      color: color.$base-black;
+
+      .title {
+        font-weight: var.$font-bold;
+        font-size: 32px;
+        line-height: 44px;
+        margin: 50px var.$auto 0px;
+        text-align: var.$center;
+      }
+
+      .refundContentWrapper {
+        width: var.$full;
+        max-width: 1035px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        margin: 50px var.$auto 150px;
+        color: color.$basic-gray;
+
+        b {
+          color: color.$blue;
+          line-height: 19px;
+
+          a {
+            text-decoration: var.$d-none;
+            color: color.$blue;
+          }
+        }
+
+        span a {
+          font-weight: var.$font-semibold;
+          color: color.$blue;
+          line-height: 19px;
+          text-decoration: var.$d-none;
+        }
+
+        p {
+          margin: 16px 0px;
+        }
+
+        h3 {
+          font-size: 18px;
+          line-height: 25px;
+          font-weight: var.$font-semibold;
+          margin: 16px 0px;
+
+        }
+      }
+    }
+  }
+}

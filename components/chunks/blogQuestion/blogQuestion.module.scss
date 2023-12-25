@@ -1,0 +1,30 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.questioncontainer {
+  padding: 16px 20px;
+  width: var.$full;
+  max-width: 718px;
+  margin: var.$auto;
+
+  h2 {
+    font-weight: var.$font-bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: color.$black-pearl;
+  }
+}
+
+.answercontainer {
+  padding: 0px 20px 12px;
+  max-width: 718px;
+  margin: var.$auto;
+
+  p {
+    font-weight: var.$font-normal;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    font-family: 'Metropolis';
+  }
+}

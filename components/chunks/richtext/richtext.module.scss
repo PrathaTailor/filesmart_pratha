@@ -1,0 +1,85 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    width: var.$full;
+    max-width: 838px;
+    margin: var.$auto;
+    padding: 64px 80px 64px;
+    color: color.$base-black;
+
+    @media screen and (max-width: var.$reg-tablet) {
+        padding: 0px 24px;
+    }
+
+    .title {
+        font-weight: var.$font-bold;
+        font-size: 32px;
+        line-height: 38px;
+        color: color.$black-pearl;
+        padding: 16px 0px;
+
+        @media screen and (max-width:var.$reg-tablet) {
+            font-size: 28px;
+            line-height: 106.5%;
+        }
+    }
+
+    .subTitle {
+        font-weight: var.$font-bold;
+        font-size: 26px;
+        line-height: 104%;
+        padding: 16px 0px;
+        color: color.$black-pearl;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            font-size: 22px;
+            line-height: 130.5%;
+            padding: 8px 0px 16px;
+        }
+    }
+
+    .question {
+        padding: 16px 0px;
+        font-weight: var.$font-bold;
+        font-size: 22px;
+        line-height: 116%;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 146%;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+
+
+
+        a {
+            color: color.$violet;
+            font-weight: var.$font-bold;
+        }
+
+        &:last-child {
+            margin-bottom: 12px;
+        }
+    }
+
+    ol,
+    ul {
+        margin: 0px 0px 16px;
+
+        @media screen and (max-width:var.$reg-tablet) {
+            margin: 0px 0px 12px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 24px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+@use '../../../../styles/variable' as var;
+@use '../../../../styles/colors' as color;
+
+.container {
+    margin: 44px 0 26px;
+    .orderSummaryWrapper {
+        background: #fafaff;
+        /* Blue 1 */
+
+        border: 3px solid #0f1eff;
+        border-radius: 25px;
+        padding: 40px 56px;
+        .cardHeading {
+            padding: 7px 38px;
+            border-radius: 6px;
+            margin: 0px var.$auto 20px;
+            background: color.$lavender;
+            color: color.$blue;
+            width: var.$full;
+            max-width: 210px;
+            line-height: 13.44px;
+            font-weight: var.$font-medium;
+
+            font-family: 'Metropolis';
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 13px;
+            text-align: center;
+            color: #0f1eff;
+        }
+
+        .cardTitle {
+            font-size: 24px;
+            line-height: 29px;
+            // margin: var.$auto;
+            font-weight: var.$font-bold;
+            height: var.$full;
+            // max-height: 35px;
+            // width: var.$full;
+            // max-width: 220px;
+            text-align: center;
+            color: #0f1e32;
+
+            @media screen and (max-width: var.$mobile-l) {
+                margin: 0px var.$auto 11px;
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: var.$font-bold;
+                width: var.$full;
+                max-width: 220px;
+                height: var.$full;
+                max-height: var.$full;
+            }
+
+            span {
+                font-weight: var.$font-light;
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+        .cardTitleBottom {
+            font-family: 'Metropolis';
+            font-weight: 500;
+            font-size: 15.16px;
+            text-align: center;
+            line-height: 17px;
+            color: #0f1e32;
+            margin-bottom: 16px;
+        }
+
+        .cardPriceDetails {
+            display: var.$flex;
+            flex-direction: var.$flex-col;
+            align-items: var.$center;
+            gap: 6px;
+            width: var.$full;
+            margin: 0px var.$auto 16px;
+
+            @media screen and (max-width: var.$mobile-l) {
+                width: var.$full;
+                max-width: 176px;
+            }
+
+            .cardPrice {
+                width: var.$full;
+                max-width: 255px;
+                font-size: 50px;
+                line-height: 40px;
+                font-weight: var.$font-semibold;
+                text-align: var.$center;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    font-size: 50px;
+                    line-height: 40px;
+                }
+
+                .priceUnit {
+                    font-size: 42px;
+                    font-weight: var.$font-bold;
+                    line-height: 42px;
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 36px;
+                        line-height: 36px;
+                    }
+                }
+                .priceInteger {
+                    font-family: 'Metropolis';
+                    font-weight: 700;
+                    font-size: 72px;
+                    line-height: 72px;
+                    text-align: center;
+
+                    /* Blue 3 */
+
+                    color: #0f1e32;
+                    display: inline-block;
+                }
+
+                .priceDecimal {
+                    font-size: 36px;
+                    font-weight: var.$font-bold;
+                    line-height: 36px;
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 26px;
+                        line-height: 26px;
+                    }
+                }
+
+                .planTerm {
+                    font-size: 30px;
+                    font-weight: var.$font-normal;
+                    line-height: 30px;
+                    color: #0f1e32;
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 20px;
+                        line-height: 20px;
+                        font-weight: var.$font-light;
+                    }
+                }
+            }
+
+            .priceComment {
+                width: var.$full;
+                // max-width: 148px;
+                font-size: 15px;
+                font-weight: var.$font-normal;
+                line-height: 15px;
+
+                font-family: 'Metropolis';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 20px;
+                /* identical to box height */
+
+                text-align: center;
+
+                /* Blue 1 */
+
+                color: #0f1eff;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    width: var.$full;
+                    max-width: 147px;
+                    font-size: 15px;
+                    line-height: 15px;
+                }
+            }
+        }
+
+        .badgeWrapper {
+            width: var.$full;
+            margin: 22px var.$auto 18px;
+
+            @media screen and (max-width: var.$mobile-l) {
+                width: var.$full;
+                max-width: 160px;
+            }
+
+            .badgeTitle {
+                display: var.$flex;
+                justify-content: var.$center;
+                align-items: var.$center;
+                gap: 4px;
+
+                @media screen and (max-width: var.$mobile-l) {
+                    gap: 3px;
+                }
+
+                // -----
+                .badgeIconTitle {
+                    font-family: 'Metropolis';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 20px;
+                    /* identical to box height, or 111% */
+
+                    text-align: center;
+
+                    /* Blue 3 */
+
+                    color: #0f1e32;
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 13px;
+                        line-height: 14px;
+                    }
+                }
+            }
+
+            .cancel {
+                font-family: 'Metropolis';
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                text-align: center;
+                color: #0f1e32;
+            }
+
+            .payContent {
+                font-family: 'Metropolis';
+                font-style: normal;
+
+                font-size: 18px;
+                line-height: 20px;
+                /* identical to box height, or 111% */
+
+                text-align: center;
+
+                /* Blue 3 */
+                font-weight: 700;
+                color: #0f1e32;
+                margin-bottom: 24px;
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.benefitsSection {
+    width: 100%;
+    padding: 40px 108px 40px 108px;
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+    flex-wrap: var.$wrap;
+    margin: 0px var.$auto;
+    gap: 75.6px;
+
+    @media screen and (max-width: var.$laptop-screen) {
+        padding: 40px 30px;
+        gap: 0px;
+
+    }
+
+    @media screen and (max-width: var.$phablet) {
+        padding: 10px 12px;
+        gap: 0px;
+        margin-bottom: 13px;
+    }
+
+    .benefit {
+        display: var.$inline-flex;
+        align-items: var.$center;
+
+        @media screen and (max-width: var.$xl-tablet) {
+            width: var.$half;
+            padding: 10px 0px 5px 0px;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+            width: var.$half;
+        }
+
+        .benefitIcon {
+            width: 60px;
+            height: 60px;
+            display: var.$inline-flex;
+            align-items: var.$center;
+            justify-content: var.$center;
+            position: var.$relative;
+
+            @media screen and (max-width: var.$lg-screen) {
+                min-width: 50px;
+                min-height: 50px;
+            }
+
+            @media screen and (max-width: var.$phablet) {
+                min-width: 32px;
+                min-height: 32px;
+                width: 32px;
+                height: 32px;
+            }
+
+            &::before {
+                content: '';
+                position: var.$absolute;
+                background-image: url('../../images/icons/icon-benefit-bg.svg');
+                height: var.$full;
+                width: var.$full;
+                background-size: var.$contain;
+                background-repeat: var.$no-repeat;
+                background-position: var.$center;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: var.$contain;
+                position: var.$relative;
+
+                @media screen and (max-width: var.$phablet) {
+                    width: 14px !important;
+                    height: 14px !important;
+                }
+
+            }
+        }
+
+        .benefitText {
+            font-weight: var.$font-semibold;
+            font-size: 24px;
+            line-height: 33.6px;
+            display: var.$inline-block;
+            padding-left: 15.6px;
+            color: color.$black-pearl;
+            margin-top: 5px;
+
+            @media screen and (max-width: var.$lg-screen) {
+                font-size: 24px;
+                line-height: var.$leading-lg;
+                padding-left: 13px;
+            }
+
+            @media screen and (max-width: var.$reg-tablet) {
+                font-size: 20px;
+                line-height: 24px;
+                padding-left: 13px;
+                margin-top: 0px;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                padding-left: 6px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            @media screen and (max-width: var.$mobile-reg) {
+                padding-left: 8px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+}

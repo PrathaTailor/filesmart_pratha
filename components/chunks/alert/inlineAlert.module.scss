@@ -1,0 +1,52 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    padding: 0px 20px;
+    width: var.$full;
+    max-width: 718px;
+    margin: 16px var.$auto;
+    position: relative;
+
+    @media screen and (max-width:var.$reg-tablet) {
+        padding: 0px 20px;
+    }
+
+    .alertDesc {
+        display: var.$flex;
+        align-items: var.$start;
+        border: var.$border var.$decoration-solid color.$blue;
+        padding: 26px 34px;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: color.$base-black;
+        font-family: 'Metropolis';
+
+        @media screen and (max-width:var.$reg-tablet) {
+            padding: 16px 24px;
+            line-height: 28px;
+        }
+        .iconAlert{
+            display: inline-block;
+            width: 31px;
+            height: 31px;
+            min-width: 31px;
+            min-height: 31px;
+            padding-left: 0px !important;
+        }
+
+        span{
+            padding-left: 16px;
+            display: inline-block;
+        }
+
+        .alertIcon {
+            display: var.$inline-block;
+            margin-right: 16px;
+            max-width: 31px;
+            object-fit: var.$contain;
+        }
+    }
+
+}

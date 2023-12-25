@@ -1,0 +1,77 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+    .privacyContainer {
+      @media screen and (max-width: var.$xl-tablet) {
+        padding: 0px 20px;
+      }
+  
+      .termsOfServiceWrapper {
+        color: color.$base-black;
+  
+        .title {
+          font-weight: var.$font-bold;
+          font-size: 32px;
+          line-height: 44px;
+          margin: 50px var.$auto 0px;
+          text-align: var.$center;
+        }
+  
+        .termsofServiceContentWrapper {
+          width: var.$full;
+          max-width: 1035px;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.3px;
+          margin: 50px var.$auto 100px;
+          color: color.$basic-gray;
+  
+          span,
+          a {
+            color: color.$blue;
+            text-decoration: var.$d-none;
+          }
+  
+          .listOne {
+            padding-left: 20px;
+            margin-top: 0px;
+          }
+  
+          ol {
+            padding-left: 20px;
+            margin-left: 3px;
+          }
+
+          li{
+            margin-bottom: 8px;
+            &:last-child{
+              margin-bottom: 0px;
+            }
+          }
+  
+          p {
+            margin: 16px 0px;
+          }
+  
+          h3 {
+            font-size: 18px;
+            color: color.$blue;
+            text-decoration: var.$underline;
+            line-height: 25px;
+            font-weight: var.$font-medium;  
+            font-weight: var.$font-medium;
+          }
+          .exhibit{
+            margin-top: 50px;
+            margin-bottom: 20px;
+          }
+          .exhibitSub{
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }
+          .center{
+            text-align: var.$center;
+          }
+        }
+      }
+    }

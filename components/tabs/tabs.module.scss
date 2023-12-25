@@ -1,0 +1,121 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.fluidContainer {
+  width: var.$full;
+  max-width: var.$full;
+  margin: 0px var.$auto;
+  color: color.$blue;
+  // border-bottom: var.$border-2 var.$decoration-solid color.$blue;
+  // display: var.$flex;
+
+  .tabWrapper {
+    // display: var.$flex;
+    gap: 17px;
+    margin: 0px var.$auto;
+    width: var.$full;
+    max-width: 415px;
+
+    @media screen and (max-width: var.$mobile-l) {
+      width: var.$full;
+      max-width: 358px;
+      gap: 18px;
+    }
+
+    .tab {
+      cursor: var.$cursor-pointer;
+      width: var.$full;
+      // max-width: 198px;
+      text-align: var.$center;
+      margin: var.$auto;
+      // border: var.$border-2 var.$decoration-solid color.$black-pearl;
+      // border-radius: 10.584px;
+      // border-bottom: var.$border-2 var.$decoration-solid color.$blue;
+      // border-bottom-left-radius: 0px;
+      // border-bottom-right-radius: 0px;
+      padding: 20px 0px 8px;
+      // height: 78px;
+      position: var.$relative;
+      top: 2px;
+      transition: all ease .3s;
+
+      @media screen and (max-width: var.$mobile-l) {
+        height: 69px;
+      }
+
+      .tabTitle {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: var.$font-bold;
+
+        @media screen and (max-width: var.$mobile-l) {
+          font-size: 22px;
+          line-height: 20.5px;
+          font-weight: var.$font-bold;
+        }
+
+      }
+
+      @media screen and (max-width: var.$phablet) {
+        padding: 20px 0px 8px;
+      }
+
+      @media screen and (max-width: var.$mobile-l) {
+        padding: 16px 0px 0px;
+      }
+
+      &.active {
+        border-color: color.$blue;
+        border-bottom: var.$border-2 var.$decoration-solid color.$amour;
+        color: color.$blue;
+        background-color: color.$amour;
+      }
+
+      &.active {
+
+        &.tab_1,
+        &.tab_2 {
+          &::before {
+            content: '';
+            position: var.$absolute;
+            background-image: url('../../images/icons/icon-arrow-draw.png');
+            width: 30px;
+            height: 30px;
+            background-size: var.$contain;
+            background-repeat: var.$no-repeat;
+            bottom: 0px;
+
+            @media screen and (max-width: var.$mobile-l) {
+              display: var.$d-none;
+            }
+          }
+        }
+
+        &.tab_1 {
+          &::before {
+            transform: rotate(45deg) translate(20px, 30px);
+          }
+        }
+
+        &.tab_2 {
+          &::before {
+            transform: rotate(-45deg) translate(-20px, 30px) scaleX(-1);
+          }
+        }
+      }
+
+      .desc {
+        // display: var.$block;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: var.$font-medium;
+
+        @media screen and (max-width: var.$mobile-l) {
+          font-size: 17px;
+          line-height: 20.5px;
+          font-weight: var.$font-medium;
+        }
+      }
+    }
+  }
+}
