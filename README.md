@@ -1,4 +1,4 @@
-Website Purpose: FileSmart.tax is a tax preparation software designed to help users file their federal and state taxes for a low fee while maximizing deductions and credits throughout the year.
+Website Purpose: [FileSmart.tax](https://filesmart.tax/) is a tax preparation software designed to help users file their federal and state taxes for a low fee while maximizing deductions and credits throughout the year.
 
 Key Features:
 - Transparent Pricing: One fair price with no hidden fees.
